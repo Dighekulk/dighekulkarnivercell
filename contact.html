@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dighe Kulkarni Org Advisors</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css?v=61">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="page-bg-cream">
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Dighe Kulkarni Org Advisors" width="1996" height="615">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#">Our Services <i class="fa-solid fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="organization-design.html">Organisation Design</a>
+                            <a href="culture-activation.html">Culture Activation</a>
+                            <a href="people-systems.html">People Systems & HR Uplift</a>
+                            <a href="leadership-assessments.html">Leadership Assessments</a>
+                        </div>
+                    </li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="careers.html">Work With Us</a></li>
+                    <li><a href="contact.html" class="active-link">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn" style="display: none;">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="detail-hero" style="background: transparent;">
+        <div class="container text-center">
+            <h1 class="text-center">Contact Us</h1>
+        </div>
+    </section>
+
+    <!-- Content Sections (Boxed Layout) -->
+    <section class="container" style="padding: 40px 20px 80px;">
+
+        <!-- Contact Card -->
+        <div class="white-content-card animate-on-scroll">
+
+            <div class="contact-split-layout">
+                <!-- Left: Form -->
+                <div class="contact-form-section">
+                    <form action="https://formsubmit.co/orgadvisors@dighekulkarni.com" method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Contact Inquiry">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://dighekulkarni.com/contact.html">
+                        <div class="contact-form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="contact-form-group" style="margin-top: 15px;">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="contact-form-group" style="margin-top: 15px;">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Example@gmail.com" required>
+                        </div>
+                        <div class="contact-form-group" style="margin-top: 15px;">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Write your message..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="contact-btn">Get In Touch</button>
+                    </form>
+                </div>
+
+                <!-- Right: Map & Info -->
+                <div class="contact-map-section">
+                    <!-- Map Placeholder Image (using a static map image for demo) -->
+                    <div class="map-container">
+                        <iframe
+                            src="https://maps.google.com/maps?q=WeWork+247+Park+Vikhroli+West+Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
+                    <div class="contact-details-list">
+                        <div class="contact-detail-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Head Office:</strong><br>
+                                WeWork, 13th Floor, 247 Park, Hindustan C. Bus Stop, Lal Bahadur Shastri Rd, Gandhi
+                                Nagar, Vikhroli West, Mumbai, MH 400079
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Singapore Office:</strong><br>
+                                10 Anson Road #19-09 International Plaza Singapore 079903
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>orgadvisors@dighekulkarni.com</span>
+                        </div>
+                        <div class="contact-detail-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 99875 35478</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-envelope fa-fw"></i> orgadvisors@dighekulkarni.com</li>
+                        <li><i class="fa-solid fa-phone fa-fw"></i> +91 9987535478</li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/dighe-kulkarni-org-advisors" target="_blank">
+                                <i class="fa-brands fa-linkedin fa-fw"></i> Dighe Kulkarni
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="footer-info">
+                    <h4>Our Locations</h4>
+                    <ul class="contact-list">
+                        <li style="margin-bottom: 24px;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Head Office:</strong><br>
+                                We Work, 10th Floor, 247 Park, Vikhroli West, Mumbai, 400079
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Singapore Office:</strong><br>
+                                10 Anson Road #19-09 International Plaza Singapore 079903
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Dighe Kulkarni. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

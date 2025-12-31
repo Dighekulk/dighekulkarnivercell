@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading... | Dighe Kulkarni Org Advisors</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css?v=62">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .case-study-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .case-study-content p {
+            margin-bottom: 24px;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .case-study-content ul {
+            margin-bottom: 24px;
+            padding-left: 20px;
+        }
+
+        .case-study-content li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .case-study-content h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        #blog-loader {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Dighe Kulkarni Org Advisors" width="1996"
+                        height="615"></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#">Our Services <i class="fa-solid fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="organization-design.html">Organisation Design</a>
+                            <a href="culture-activation.html">Culture Activation</a>
+                            <a href="people-systems.html">People Systems & HR Uplift</a>
+                            <a href="leadership-assessments.html">Leadership Assessments</a>
+                        </div>
+                    </li>
+                    <li><a href="blogs.html" class="active-link">Blogs</a></li>
+                    <li><a href="careers.html">Work With Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn" style="display: none;">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content with Glass Panel -->
+    <section class="glass-bg-wrapper">
+        <div class="container">
+            <div class="glass-panel">
+                <div id="blog-loader">Loading article...</div>
+                <div id="blog-content" style="display: none;">
+                    <h1 class="section-title" id="post-title"></h1>
+                    <div class="case-study-content" id="post-body">
+                        <!-- Content injected here -->
+                    </div>
+
+                    <div style="margin-top: 60px; text-align: center;">
+                        <a href="blogs.html" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Back to
+                            Blogs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-envelope fa-fw"></i> orgadvisors@dighekulkarni.com</li>
+                        <li><i class="fa-solid fa-phone fa-fw"></i> +91 9987535478</li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/dighe-kulkarni-org-advisors" target="_blank">
+                                <i class="fa-brands fa-linkedin fa-fw"></i> Dighe Kulkarni
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <h4>Our Locations</h4>
+                    <ul class="contact-list">
+                        <li style="margin-bottom: 24px;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Head Office:</strong><br>
+                                We Work, 10th Floor, 247 Park, Vikhroli West, Mumbai, 400079
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Singapore Office:</strong><br>
+                                10 Anson Road #19-09 International Plaza Singapore 079903
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Dighe Kulkarni. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js?v=4"></script>
+    <script type="module">
+        import { client, urlFor } from './js/sanity_client.js';
+        import { toHTML } from 'https://esm.sh/@portabletext/to-html';
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Get slug from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const slug = urlParams.get('slug');
+
+            if (!slug) {
+                document.getElementById('blog-loader').innerText = 'Blog post not found.';
+                return;
+            }
+
+            try {
+                // Sanity GROQ Query for single post
+                const query = `*[_type == "post" && slug.current == $slug][0]{
+                    title,
+                    mainImage,
+                    body
+                }`;
+
+                const post = await client.fetch(query, { slug });
+
+                if (!post) {
+                    throw new Error('Post not found');
+                }
+
+                // Update UI
+                document.title = `${post.title} | Dighe Kulkarni Org Advisors`;
+                document.getElementById('post-title').innerText = post.title;
+
+                // Render Body (Portable Text to HTML)
+                // Custom components configuration for images inside body
+                const myPortableTextComponents = {
+                    types: {
+                        image: ({ value }) => {
+                            if (!value?.asset?._ref) {
+                                return '';
+                            }
+                            return `
+                < figure >
+                <img src="${urlFor(value).width(800).url()}" alt="${value.alt || ' '}" />
+                                </figure >
+                              `;
+                        }
+                    }
+                };
+
+                const bodyHtml = toHTML(post.body, { components: myPortableTextComponents });
+                document.getElementById('post-body').innerHTML = bodyHtml;
+
+                // Show content
+                document.getElementById('blog-loader').style.display = 'none';
+                document.getElementById('blog-content').style.display = 'block';
+
+            } catch (err) {
+                console.error(err);
+                document.getElementById('blog-loader').innerText = 'Error loading blog post. It may not exist.';
+            }
+        });
+    </script>
+</body>
+
+</html>

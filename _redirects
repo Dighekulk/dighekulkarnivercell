@@ -1,0 +1,2 @@
+# Netlify Redirects
+/blogs/*  /blog-details.html  200

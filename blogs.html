@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs & Insights | Dighe Kulkarni Org Advisors</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css?v=61">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Dighe Kulkarni Org Advisors" width="1996" height="615">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#">Our Services <i class="fa-solid fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="organization-design.html">Organisation Design</a>
+                            <a href="culture-activation.html">Culture Activation</a>
+                            <a href="people-systems.html">People Systems & HR Uplift</a>
+                            <a href="leadership-assessments.html">Leadership Assessments</a>
+                        </div>
+                    </li>
+                    <li><a href="blogs.html" class="active-link">Blogs</a></li>
+                    <li><a href="careers.html">Work With Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn" style="display: none;">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blogs Header -->
+    <section class="blogs-header text-center" style="padding: 40px 0 10px;">
+        <div class="container">
+            <h1 class="section-title text-center">Blogs</h1>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blogs-section">
+        <div class="container">
+            <div class="blog-grid" id="blog-grid-container">
+                <!-- Blogs will be loaded here dynamically by the script below -->
+                <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
+                    <i class="fa-solid fa-spinner fa-spin" style="font-size: 2rem;"></i>
+                    <p>Loading blogs...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module">
+        import { client, urlFor } from './js/sanity_client.js';
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const grid = document.getElementById('blog-grid-container');
+
+            try {
+                // Sanity GROQ Query
+                // Sanity GROQ Query
+                const query = `*[_type == "post"] | order(_createdAt desc) {
+                    title,
+                    slug,
+                    excerpt,
+                    mainImage,
+                    readingTime,
+                    "estimatedReadingTime": round(length(pt::text(body)) / 5 / 180 ) + 1
+                }`;
+
+                const blogs = await client.fetch(query);
+
+                // Clear loading spinner
+                grid.innerHTML = '';
+
+                if (blogs.length === 0) {
+                    grid.innerHTML = `
+                        <div style="grid-column: 1/-1; text-align: center;">
+                            <p>No blogs found. Please check back later.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Render blogs
+                const html = blogs.map((blog, index) => {
+                    const title = blog.title || 'Untitled Blog';
+                    const excerpt = blog.excerpt || '';
+                    const readTime = blog.readingTime ? `${blog.readingTime} min read` : `${blog.estimatedReadingTime || 5} min read`;
+
+                    // Image handling
+                    let imageUrl = 'images/logo.png';
+                    if (blog.mainImage) {
+                        try {
+                            imageUrl = urlFor(blog.mainImage).width(400).url();
+                        } catch (e) {
+                            console.warn('Image generation failed', e);
+                        }
+                    }
+
+                    const link = `blog-details.html?slug=${blog.slug.current}`;
+                    const delay = index * 0.1;
+
+                    return `
+                    <div class="blog-card animate-on-scroll" style="animation-delay: ${delay}s">
+                        <div class="blog-img">
+                            <img src="${imageUrl}" alt="${title}">
+                            <span class="read-tag">${readTime}</span>
+                        </div>
+                        <div class="blog-content">
+                            <!-- Date removed -->
+                            <h2>${title}</h2>
+                            <p>${excerpt}</p>
+                            <a href="${link}" class="read-more-btn">Read more <i
+                                    class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    `;
+                }).join('');
+
+                grid.innerHTML = html;
+
+                // Re-initialize intersection observer for the new elements
+                const newElements = grid.querySelectorAll('.animate-on-scroll');
+                if ("IntersectionObserver" in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("in-view");
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+
+                    newElements.forEach(el => observer.observe(el));
+                } else {
+                    newElements.forEach(el => el.classList.add('in-view'));
+                }
+
+            } catch (err) {
+                console.error('Error loading blogs:', err);
+                grid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center;">
+                        <p>Unable to load blogs at this time. Please check configuration.</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-envelope fa-fw"></i> orgadvisors@dighekulkarni.com</li>
+                        <li><i class="fa-solid fa-phone fa-fw"></i> +91 9987535478</li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/dighe-kulkarni-org-advisors" target="_blank">
+                                <i class="fa-brands fa-linkedin fa-fw"></i> Dighe Kulkarni
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <h4>Our Locations</h4>
+                    <ul class="contact-list">
+                        <li style="margin-bottom: 24px;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Head Office:</strong><br>
+                                We Work, 10th Floor, 247 Park, Vikhroli West, Mumbai, 400079
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Singapore Office:</strong><br>
+                                10 Anson Road #19-09 International Plaza Singapore 079903
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Dighe Kulkarni. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
