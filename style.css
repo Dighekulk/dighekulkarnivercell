@@ -216,10 +216,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: var(--container-width);
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 32px;
-    /* 24-32px left/right */
+    padding: 0 40px;
+    /* Increased padding slightly for clean look */
     width: 100%;
 }
 
@@ -268,7 +268,7 @@ header {
 
 .nav-links {
     display: flex;
-    gap: 32px;
+    gap: 24px;
     align-items: center;
 }
 
@@ -286,6 +286,7 @@ header {
     /* Deep Teal #204650 */
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    white-space: nowrap;
     position: relative;
     transition: color 0.25s ease;
     /* Smooth 0.25s ease */
@@ -325,6 +326,7 @@ header {
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--primary-color);
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -339,6 +341,10 @@ header {
         padding: 20px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         gap: 15px;
+    }
+
+    .mobile-menu-btn {
+        display: block !important;
     }
 
     .nav-links.active {

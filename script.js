@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelector(".nav-links");
 
     if (mobileBtn && navLinks) {
-        mobileBtn.style.display = "block";
         mobileBtn.addEventListener("click", () => {
             navLinks.classList.toggle("active");
         });
