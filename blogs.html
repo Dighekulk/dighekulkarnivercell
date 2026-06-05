@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T9GTP2QF');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | DKOA</title>
+    <meta name="description" content="Perspectives on organisation effectiveness, leadership capability, operating models, governance, and scaling businesses.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css?v=64">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, rgba(21, 50, 57, 0.55), rgba(32, 70, 80, 0.55)), url('images/hero_banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 220px 0 140px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        .service-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(to top, #F8FAFC, transparent);
+        }
+
+        .faq-item-premium {
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 16px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+        .faq-item-premium:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-color: rgba(191, 183, 129, 0.4);
+        }
+        .faq-item-premium .faq-question {
+            padding: 28px 32px;
+            background: #ffffff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        .faq-item-premium.active .faq-question {
+            color: var(--secondary-color);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .faq-item-premium .faq-question i {
+            font-size: 1.1rem;
+            color: var(--accent-gold);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+        .faq-item-premium.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        .faq-item-premium .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: #ffffff;
+            padding: 0 32px;
+            text-align: left;
+        }
+        .faq-item-premium.active .faq-answer {
+            max-height: 1000px;
+            padding-top: 25px;
+            padding-bottom: 28px;
+        }
+        .faq-item-premium .faq-answer p {
+            margin: 0;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+        }
+    </style>
+</head>
+
+<body class="page-bg-cream">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9GTP2QF" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Dighe Kulkarni Org Advisors" width="1996" height="615">
+            </div>
+            <nav>
+                                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="organization-design.html">ORG DESIGN</a></li>
+                    <li class="dropdown">
+                        <a href="#" style="display: inline-flex; align-items: center;">INTEGRATED SERVICES <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 6px;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="leadership-assessments.html">Leadership & Assessment</a>
+                            <a href="talent-assessment.html">Talent Assessment & Strategy</a>
+                            <a href="people-systems.html">People Systems</a>
+                            <a href="culture-activation.html">Culture Activation</a>
+                        </div>
+                    </li>
+                    <li><a href="blogs.html" class="active-link">BLOGS</a></li>
+                    <li><a href="careers.html">WORK WITH US</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn" style="display: none;">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="service-hero animate-on-scroll">
+        <div class="container text-center" style="max-width: 950px; position: relative; z-index: 2;">
+            <h1 style="color: #ffffff; font-size: 3.8rem; line-height: 1.25; margin: 0 auto 25px; text-align: center; font-weight: 700;">Perspectives on organisation and leadership effectiveness.</h1>
+            <p style="color: #ffffff; font-size: 1.35rem; line-height: 1.6; opacity: 0.95; margin: 0 auto; text-align: center;">Insights on scaling organisations, leadership capability, operating effectiveness, governance, and organisational transformation.</p>
+        </div>
+    </section>
+
+    <!-- Blog Grid Section -->
+    <section class="blogs-section animate-on-scroll" style="padding: 100px 0; background-color: #F8FAFC;">
+        <div class="container" style="max-width: 1300px;">
+            <span style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; text-align: center; margin-bottom: 12px;">Latest Thinking</span>
+            <h2 class="section-title text-center" style="font-size: 3.2rem; margin-bottom: 60px;">Articles & Publications</h2>
+
+            <div class="blog-grid" id="blog-grid-container">
+                <!-- Blogs will be loaded here dynamically by the script below -->
+                <div style="grid-column: 1/-1; text-align: center; padding: 60px;">
+                    <i class="fa-solid fa-spinner fa-spin" style="font-size: 2.5rem; color: var(--secondary-color); margin-bottom: 20px;"></i>
+                    <p style="font-size: 1.2rem; color: var(--text-dark);">Loading latest insights...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LinkedIn CTA Section -->
+    <section class="linkedin-cta-section animate-on-scroll" style="padding: 100px 0; background-color: #ffffff; text-align: center; border-top: 1px solid rgba(0,0,0,0.05);">
+        <div class="container" style="max-width: 800px;">
+            <div style="font-size: 3.5rem; color: #0077b5; margin-bottom: 25px;"><i class="fa-brands fa-linkedin"></i></div>
+            <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 20px; font-weight: 700;">Follow DKOA on LinkedIn for more perspectives.</h3>
+            <a href="https://www.linkedin.com/company/dighe-kulkarni-org-advisors" target="_blank" class="btn btn-primary" style="padding: 15px 35px; border-radius: 50px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">View LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-envelope fa-fw"></i> orgadvisors@dighekulkarni.com</li>
+                        <li><i class="fa-solid fa-phone fa-fw"></i> +91 9987535478</li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/dighe-kulkarni-org-advisors" target="_blank">
+                                <i class="fa-brands fa-linkedin fa-fw"></i> Dighe Kulkarni
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <h4>Our Locations</h4>
+                    <ul class="contact-list">
+                        <li style="margin-bottom: 24px;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Head Office:</strong><br>
+                                We Work, 13th Floor, 247 Park, Vikhroli West, Mumbai, 400079
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Singapore Office:</strong><br>
+                                10 Anson Road #19-09 International Plaza Singapore 079903
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Dighe Kulkarni. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dynamic Blogs Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const grid = document.getElementById('blog-grid-container');
+
+            try {
+                const response = await fetch('blogs.json');
+                if (!response.ok) throw new Error('Failed to load blogs.json');
+                const blogs = await response.json();
+
+                grid.innerHTML = '';
+
+                if (blogs.length === 0) {
+                    grid.innerHTML = `
+                        <div style="grid-column: 1/-1; text-align: center;">
+                            <p>No articles found. Please check back later.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const html = blogs.map((blog, index) => {
+                    const title = blog.title || 'Untitled Publication';
+                    const excerpt = blog.excerpt || '';
+                    const readTime = blog.readTime || '5 min read';
+                    const imageUrl = blog.image || 'images/logo.png';
+                    const link = `blog-${blog.slug}.html`;
+                    const delay = index * 0.1;
+
+                    return `
+                    <div class="blog-card animate-on-scroll" style="animation-delay: ${delay}s">
+                        <div class="blog-img">
+                            <img src="${imageUrl}" alt="${title}" loading="lazy">
+                            <span class="read-tag">${readTime}</span>
+                        </div>
+                        <div class="blog-content">
+                            <h2>${title}</h2>
+                            <p>${excerpt}</p>
+                            <a href="${link}" class="read-more-btn">Read full article <i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    `;
+                }).join('');
+
+                grid.innerHTML = html;
+
+                const newElements = grid.querySelectorAll('.animate-on-scroll');
+                if ("IntersectionObserver" in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("in-view");
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+
+                    newElements.forEach(el => observer.observe(el));
+                } else {
+                    newElements.forEach(el => el.classList.add('in-view'));
+                }
+
+            } catch (err) {
+                console.error('Error loading blogs:', err);
+                grid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 40px 0;">
+                        <p style="font-size: 1.2rem; color: var(--text-dark);">Unable to load articles. Please check your connection.</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

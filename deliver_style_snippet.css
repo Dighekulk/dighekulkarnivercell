@@ -1,0 +1,120 @@
+/* Deliver Section (Image Left, Text Right Cards) */
+.deliver-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.deliver-card {
+    display: flex;
+    background: #fff;
+    border-radius: 20px;
+    /* rounded corners */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    align-items: stretch;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deliver-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.deliver-img {
+    width: 35%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.deliver-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.deliver-text {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.deliver-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #222;
+    /* Darker heading */
+    font-weight: 700;
+}
+
+.deliver-text p {
+    font-size: 1rem;
+    color: var(--text-grey);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.deliver-text ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+
+.deliver-text ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Card Specific Rounded Corners (Optional 'Leaf' effect from image) */
+/* Top Card */
+.deliver-card:first-child {
+    border-top-left-radius: 60px;
+}
+
+.deliver-card:first-child .deliver-img {
+    border-top-left-radius: 60px;
+}
+
+/* Bottom Card */
+.deliver-card:last-child {
+    border-bottom-left-radius: 60px;
+}
+
+.deliver-card:last-child .deliver-img {
+    border-bottom-left-radius: 60px;
+}
+
+@media (max-width: 900px) {
+    .deliver-card {
+        flex-direction: column;
+    }
+
+    .deliver-img {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* Reset special radii on mobile if desired, or keep them */
+    .deliver-card:first-child,
+    .deliver-card:first-child .deliver-img {
+        border-top-left-radius: 20px;
+        /* Reset to standard */
+    }
+
+    .deliver-card:last-child,
+    .deliver-card:last-child .deliver-img {
+        border-bottom-left-radius: 20px;
+        /* Reset to standard */
+    }
+
+    .deliver-text {
+        padding: 30px 20px;
+    }
+}

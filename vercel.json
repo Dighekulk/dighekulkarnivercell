@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/talent-assessment.html", "destination": "/organization-design.html", "statusCode": 301 },
+    { "source": "/culture-activation.html", "destination": "/organization-design.html", "statusCode": 301 },
+    { "source": "/people-systems.html", "destination": "/organization-design.html", "statusCode": 301 },
+    { "source": "/careers.html", "destination": "/about.html", "statusCode": 301 },
+    { "source": "/leadership-assessments.html", "destination": "/leadership-impact.html", "statusCode": 301 }
+  ]
+}
