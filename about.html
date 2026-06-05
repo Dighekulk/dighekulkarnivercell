@@ -41,10 +41,9 @@
             height: 60px;
             background: linear-gradient(to top, #F8FAFC, transparent);
         }
-
         .who-we-are-section {
             background-color: #F8FAFC;
-            padding: 100px 0;
+            padding: 60px 0;
         }
         .who-we-are-grid {
             display: grid;
@@ -56,43 +55,33 @@
         .premium-value-card {
             background: #ffffff;
             border: 1px solid rgba(0,0,0,0.04);
-            border-radius: 20px;
-            padding: 50px 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border-top: 4px solid var(--accent-gold);
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             position: relative;
             overflow: hidden;
-        }
-        .premium-value-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--accent-gold);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-            transform-origin: left;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
         }
         .premium-value-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-        .premium-value-card:hover::before {
-            transform: scaleX(1);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(21, 50, 57, 0.08);
+            border-color: rgba(121, 166, 184, 0.3);
         }
         .value-icon-box {
-            width: 70px;
-            height: 70px;
-            border-radius: 16px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             background: rgba(191, 183, 129, 0.15);
-            color: var(--accent-gold);
+            color: var(--primary-color);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.8rem;
-            margin-bottom: 25px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
         }
 
         /* Founder & Advisors */
@@ -100,15 +89,15 @@
             background: #ffffff;
             border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.04);
             border: 1px solid rgba(0,0,0,0.04);
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             display: grid;
             grid-template-columns: 380px 1fr;
             transition: all 0.4s ease;
         }
         .person-profile-card:hover {
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            box-shadow: 0 25px 50px rgba(21, 50, 57, 0.08);
             border-color: rgba(191, 183, 129, 0.3);
         }
         .person-img-box {
@@ -130,7 +119,7 @@
             transform: scale(1.05);
         }
         .person-content-box {
-            padding: 60px 50px;
+            padding: 50px 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -156,18 +145,12 @@
             color: var(--primary-color);
         }
 
-        /* How We Work Grid */
-        .hww-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-left: 4px solid var(--accent-gold);
-            padding: 35px 30px;
-            border-radius: 16px;
-            transition: all 0.4s ease;
-        }
-        .hww-item:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-5px);
+        /* How We Work Story */
+        .hww-story-row {
+            display: flex;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
         }
 
         @media (max-width: 1024px) {
@@ -182,7 +165,21 @@
             .person-content-box {
                 padding: 40px 30px;
             }
+        }
 
+        @media (max-width: 768px) {
+            .hww-story-row {
+                flex-direction: column;
+                gap: 20px !important;
+                align-items: center;
+                text-align: center;
+            }
+            .hww-story-row > div:first-child {
+                margin: 0 auto;
+            }
+            .desktop-only-line {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -253,16 +250,16 @@
             </div>
         </div>
     </section>
-
     <!-- WHAT WE VALUE -->
-    <section style="padding: 100px 0; background: #ffffff;" class="animate-on-scroll">
+    <section style="padding: 60px 0; background: #ffffff;" class="animate-on-scroll">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 30px;" class="animate-on-scroll">
-                <span style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 12px;">WHAT WE VALUE</span>
+            <div style="text-align: center; margin-bottom: 40px;" class="animate-on-scroll">
+                <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 10px;">WHAT WE VALUE</span>
+                <h2 class="section-title" style="margin-bottom: 15px; font-size: 2.8rem; font-weight: 800; color: var(--primary-color);">Our core principles.</h2>
             </div>
-            <p style="max-width: 700px; margin: 0 auto 60px; text-align: center; font-size: 1.15rem; color: var(--text-dark);">The principles that guide our partnership, thinking, and delivery.</p>
+            <p style="max-width: 700px; margin: 0 auto 40px; text-align: center; font-size: 1.15rem; color: var(--text-dark);">The principles that guide our partnership, thinking, and delivery.</p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 40px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px;">
                 <!-- Value 1 -->
                 <div class="premium-value-card animate-on-scroll">
                     <div class="value-icon-box">
@@ -294,10 +291,11 @@
     </section>
 
     <!-- FOUNDER -->
-    <section style="background-color: #F8FAFC; padding: 100px 0;" class="animate-on-scroll">
+    <section style="background-color: #F8FAFC; padding: 60px 0;" class="animate-on-scroll">
         <div class="container" style="max-width: 1200px;">
             <div style="text-align: center; margin-bottom: 40px;" class="animate-on-scroll">
-                <span style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 12px;">FOUNDER</span>
+                <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 10px;">OUR LEADERSHIP</span>
+                <h2 class="section-title" style="margin-bottom: 15px; font-size: 2.8rem; font-weight: 800; color: var(--primary-color);">Meet Our Founder.</h2>
             </div>
 
             <div class="person-profile-card animate-on-scroll">
@@ -320,12 +318,13 @@
     </section>
 
     <!-- PARTNERS & ADVISORS -->
-    <section style="padding: 100px 0; background: #ffffff;" class="animate-on-scroll">
+    <section style="padding: 60px 0; background: #ffffff;" class="animate-on-scroll">
         <div class="container" style="max-width: 1200px;">
-            <div style="text-align: center; margin-bottom: 30px;" class="animate-on-scroll">
-                <span style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 12px;">PARTNERS AFFILIATES & ADVISORS</span>
+            <div style="text-align: center; margin-bottom: 40px;" class="animate-on-scroll">
+                <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 10px;">EXPERT NETWORK</span>
+                <h2 class="section-title" style="margin-bottom: 15px; font-size: 2.8rem; font-weight: 800; color: var(--primary-color);">Partners, Affiliates & Advisors.</h2>
             </div>
-            <p style="max-width: 800px; margin: 0 auto 60px; text-align: center; font-size: 1.2rem; color: var(--text-dark); line-height: 1.6;">DKOA works with a growing network of experienced partners, advisors, and specialists across organisation, leadership, talent, and transformation, bringing the right expertise to each client’s context. Engagements are led directly by experienced practitioners.</p>
+            <p style="max-width: 800px; margin: 0 auto 40px; text-align: center; font-size: 1.2rem; color: var(--text-dark); line-height: 1.6;">DKOA works with a growing network of experienced partners, advisors, and specialists across organisation, leadership, talent, and transformation, bringing the right expertise to each client’s context. Engagements are led directly by experienced practitioners.</p>
 
             <!-- Rahul Pinjarkar -->
             <div class="person-profile-card animate-on-scroll">
@@ -366,57 +365,62 @@
     </section>
 
     <!-- HOW WE WORK -->
-    <section style="padding: 100px 0; background: linear-gradient(135deg, #153239 0%, #204650 100%); color: #ffffff;" class="animate-on-scroll">
-        <div class="container" style="max-width: 1300px;">
-            <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; text-align: center; margin-bottom: 12px;">HOW WE WORK</span>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 35px; margin-top: 40px;">
-                <!-- Item 1 -->
-                <div class="hww-item animate-on-scroll">
-                    <div style="font-size: 1.8rem; color: var(--accent-gold); margin-bottom: 18px;"><i class="fa-solid fa-user-tie"></i></div>
-                    <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 12px; font-weight: 700;">Senior-led engagement model</h3>
-                    <p style="color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.6; margin: 0;">Clients work directly with experienced senior practitioners. The people who scope the work are the people who do it.</p>
+    <section style="padding: 60px 0; background: linear-gradient(135deg, #153239 0%, #204650 100%); color: #ffffff;" class="animate-on-scroll">
+        <div class="container" style="max-width: 1100px;">
+            <div style="text-align: center; margin-bottom: 50px;" class="animate-on-scroll">
+                <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 10px;">HOW WE WORK</span>
+                <h2 class="section-title" style="color: #ffffff; margin-bottom: 15px; font-size: 2.8rem; font-weight: 800;">Our execution story: From diagnosis to lasting capability.</h2>
+                <p style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.1rem;">We don't just hand over reports. We partner with you at every stage to build real capability.</p>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 40px; margin-top: 50px; position: relative;">
+                <!-- Line connecting steps (Desktop only) -->
+                <div style="position: absolute; left: 50px; top: 0; bottom: 0; width: 2px; background: rgba(191, 183, 129, 0.25); z-index: 1;" class="desktop-only-line"></div>
+                
+                <!-- Phase 1 -->
+                <div class="hww-story-row">
+                    <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent-gold); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                        01
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 35px; border-radius: 16px; flex-grow: 1;">
+                        <h3 style="color: #ffffff; font-size: 1.6rem; margin-bottom: 12px; font-weight: 700;">Diagnose & Partner (Commercially Grounded)</h3>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.7; margin: 0; max-width: 100%;">
+                            Every engagement starts by rooting ourselves in your business reality and financial goals. We work in close partnership with your leadership team to isolate what constraints execution and scale, ensuring all diagnostic insights are commercially grounded.
+                        </p>
+                    </div>
                 </div>
-
-                <!-- Item 2 -->
-                <div class="hww-item animate-on-scroll">
-                    <div style="font-size: 1.8rem; color: var(--accent-gold); margin-bottom: 18px;"><i class="fa-solid fa-gears"></i></div>
-                    <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 12px; font-weight: 700;">Practical and execution-focused approach</h3>
-                    <p style="color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.6; margin: 0;">We translate complex frameworks into clear, workable models designed specifically for real-world execution.</p>
+                
+                <!-- Phase 2 -->
+                <div class="hww-story-row">
+                    <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent-gold); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                        02
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 35px; border-radius: 16px; flex-grow: 1;">
+                        <h3 style="color: #ffffff; font-size: 1.6rem; margin-bottom: 12px; font-weight: 700;">Custom Design (Tailored & Practical)</h3>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.7; margin: 0; max-width: 100%;">
+                            Instead of forcing generic templates, we engineer customized and modular solutions to address your exact stage of complexity. We translate complex organisation design frameworks into clear, workable operating models designed specifically for real-world execution.
+                        </p>
+                    </div>
                 </div>
-
-                <!-- Item 3 -->
-                <div class="hww-item animate-on-scroll">
-                    <div style="font-size: 1.8rem; color: var(--accent-gold); margin-bottom: 18px;"><i class="fa-solid fa-cubes"></i></div>
-                    <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 12px; font-weight: 700;">Tailored and modular solutions</h3>
-                    <p style="color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.6; margin: 0;">Customized interventions designed to address your exact stage of scale, complexity, and growth.</p>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="hww-item animate-on-scroll">
-                    <div style="font-size: 1.8rem; color: var(--accent-gold); margin-bottom: 18px;"><i class="fa-solid fa-handshake"></i></div>
-                    <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 12px; font-weight: 700;">Close partnership with leadership teams</h3>
-                    <p style="color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.6; margin: 0;">We work alongside your leadership teams to ensure deep alignment, buy-in, and operational clarity.</p>
-                </div>
-
-                <!-- Item 5 -->
-                <div class="hww-item animate-on-scroll">
-                    <div style="font-size: 1.8rem; color: var(--accent-gold); margin-bottom: 18px;"><i class="fa-solid fa-chart-column"></i></div>
-                    <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 12px; font-weight: 700;">Focus on sustainable organisational capability</h3>
-                    <p style="color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.6; margin: 0;">We build long-term organisational muscle and bench strength so progress is sustained independently.</p>
-                </div>
-
-                <!-- Item 6 -->
-                <div class="hww-item animate-on-scroll">
-                    <div style="font-size: 1.8rem; color: var(--accent-gold); margin-bottom: 18px;"><i class="fa-solid fa-lightbulb"></i></div>
-                    <h3 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 12px; font-weight: 700;">Business-first and commercially grounded thinking</h3>
-                    <p style="color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.6; margin: 0;">All organisation and talent decisions are strictly anchored in business outcomes and financial realities.</p>
+                
+                <!-- Phase 3 -->
+                <div class="hww-story-row">
+                    <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent-gold); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                        03
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 35px; border-radius: 16px; flex-grow: 1;">
+                        <h3 style="color: #ffffff; font-size: 1.6rem; margin-bottom: 12px; font-weight: 700;">Activate & Sustain (Senior-Led Capability)</h3>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.7; margin: 0; max-width: 100%;">
+                            Our engagements are led directly by senior practitioners. We work hand-in-hand with your teams to implement changes, activate governance, align leadership, and build long-term organisational muscle and capability, so progress is sustained independently long after we leave.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="testimonials animate-on-scroll" style="background-color: #F8FAFC; padding: 100px 0;">
+    <section class="testimonials animate-on-scroll" style="background-color: #F8FAFC; padding: 60px 0;">
         <div class="container text-center" style="max-width: 900px;">
             <span style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 12px;">Client Feedback</span>
             <h2 class="section-title text-center" style="font-size: 2.8rem; margin-bottom: 50px;">Testimonials</h2>
@@ -433,44 +437,64 @@
     </section>
 
     <!-- Footer -->
+        <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-info">
-                    <h4>Contact Us</h4>
-                    <ul class="contact-list">
-                        <li><i class="fa-solid fa-envelope fa-fw"></i> orgadvisors@dighekulkarni.com</li>
-                        <li><i class="fa-solid fa-phone fa-fw"></i> +91 9987535478</li>
-                        <li>
-                            <a href="https://www.linkedin.com/company/dighe-kulkarni-org-advisors" target="_blank">
-                                <i class="fa-brands fa-linkedin fa-fw"></i> Dighe Kulkarni
-                            </a>
-                        </li>
-                    </ul>
-
+                    <div style="margin-bottom: 20px;">
+                        <img src="images/logo.png" alt="Dighe Kulkarni Org Advisors" style="width: 200px; height: auto; filter: brightness(0) invert(1);">
+                    </div>
+                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">DKOA partners with PE-backed, founder-led, and scaling businesses to strengthen organisation systems and leadership effectiveness.</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="https://www.linkedin.com/company/dighe-kulkarni-org-advisors" target="_blank" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 1.2rem; transition: all 0.3s ease;">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-info">
-                    <h4>Our Locations</h4>
-                    <ul class="contact-list">
-                        <li style="margin-bottom: 24px;">
-                            <i class="fa-solid fa-location-dot"></i>
+                    <h4 style="color: #ffffff; font-size: 1.15rem; font-weight: 700; margin-bottom: 24px; position: relative; padding-bottom: 8px;">
+                        Quick Links
+                        <span style="position: absolute; bottom: 0; left: 0; width: 30px; height: 2px; background: var(--accent-gold);"></span>
+                    </h4>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                        <li><a href="index.html" style="color: rgba(255,255,255,0.8); font-size: 0.95rem; transition: color 0.3s ease;">Home</a></li>
+                        <li><a href="about.html" style="color: rgba(255,255,255,0.8); font-size: 0.95rem; transition: color 0.3s ease;">About Us</a></li>
+                        <li><a href="organization-design.html" style="color: rgba(255,255,255,0.8); font-size: 0.95rem; transition: color 0.3s ease;">Org Design</a></li>
+                        <li><a href="blogs.html" style="color: rgba(255,255,255,0.8); font-size: 0.95rem; transition: color 0.3s ease;">Blogs</a></li>
+                        <li><a href="careers.html" style="color: rgba(255,255,255,0.8); font-size: 0.95rem; transition: color 0.3s ease;">Careers</a></li>
+                        <li><a href="contact.html" style="color: rgba(255,255,255,0.8); font-size: 0.95rem; transition: color 0.3s ease;">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <h4 style="color: #ffffff; font-size: 1.15rem; font-weight: 700; margin-bottom: 24px; position: relative; padding-bottom: 8px;">
+                        Our Offices
+                        <span style="position: absolute; bottom: 0; left: 0; width: 30px; height: 2px; background: var(--accent-gold);"></span>
+                    </h4>
+                    <ul class="contact-list" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 20px;">
+                        <li style="display: flex; gap: 15px; align-items: flex-start; color: rgba(255, 255, 255, 0.85); font-size: 0.95rem;">
+                            <i class="fa-solid fa-location-dot" style="color: var(--accent-gold); font-size: 1.1rem; margin-top: 3px;"></i>
                             <div>
-                                <strong>Head Office:</strong><br>
+                                <strong>Mumbai (Head Office)</strong><br>
                                 We Work, 13th Floor, 247 Park, Vikhroli West, Mumbai, 400079
                             </div>
                         </li>
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
+                        <li style="display: flex; gap: 15px; align-items: flex-start; color: rgba(255, 255, 255, 0.85); font-size: 0.95rem;">
+                            <i class="fa-solid fa-location-dot" style="color: var(--accent-gold); font-size: 1.1rem; margin-top: 3px;"></i>
                             <div>
-                                <strong>Singapore Office:</strong><br>
-                                10 Anson Road #19-09 International Plaza Singapore 079903
+                                <strong>Singapore Office</strong><br>
+                                10 Anson Road #19-09 International Plaza, Singapore 079903
                             </div>
+                        </li>
+                        <li style="display: flex; gap: 15px; align-items: center; color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; margin-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                            <i class="fa-solid fa-envelope" style="color: var(--accent-gold); font-size: 1.1rem;"></i>
+                            <span>orgadvisors@dighekulkarni.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
-                &copy; 2024 Dighe Kulkarni. All Rights Reserved.
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px; text-align: center; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">
+                &copy; 2024 Dighe Kulkarni Org Advisors. All Rights Reserved.
             </div>
         </div>
     </footer>
