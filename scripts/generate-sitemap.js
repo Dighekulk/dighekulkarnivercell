@@ -9,11 +9,9 @@ const staticPages = [
     'index.html',
     'about.html',
     'organization-design.html',
-    'culture-activation.html',
-    'people-systems.html',
-    'leadership-assessments.html',
-    'blogs.html',
-    'careers.html',
+    'leadership-impact.html',
+    'insights.html',
+    'faq.html',
     'contact.html'
 ];
 

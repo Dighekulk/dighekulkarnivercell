@@ -4,26 +4,26 @@ import re
 html_dir = r"d:\Darshan\Coding\dighe-kulkarni-org-advisory-main"
 
 menu_items_def = [
-    ("index.html", "Home"),
-    ("organization-design.html", "Organisation Design & Effectiveness"),
-    ("leadership-assessments.html", "Leadership Impact"),
-    ("about.html", "About Us"),
-    ("blogs.html", "Insights"),
-    ("faq.html", "Frequently Asked Questions"),
-    ("contact.html", "Contact")
+    ("index.html", "HOME"),
+    ("organization-design.html", "ORG DESIGN"),
+    ("leadership-impact.html", "LEADERSHIP IMPACT"),
+    ("about.html", "ABOUT US"),
+    ("insights.html", "INSIGHTS"),
+    ("faq.html", "FAQ"),
+    ("contact.html", "CONTACT US")
 ]
 
 def update_html_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Find the nav-links block
-    # Matches <ul class="nav-links"> ... </ul> including newlines
-    nav_pattern = re.compile(r'(<ul class="nav-links">)(.*?)(</ul>)', re.DOTALL)
+    # Find the nav block
+    # Matches <nav> ... </nav> including newlines
+    nav_pattern = re.compile(r'(<nav>)(.*?)(</nav>)', re.DOTALL)
     
     match = nav_pattern.search(content)
     if not match:
-        print(f"No nav-links found in {os.path.basename(file_path)}")
+        print(f"No nav found in {os.path.basename(file_path)}")
         return False
 
     prefix = match.group(1)
@@ -53,14 +53,25 @@ def update_html_file(file_path):
 
     # Build new menu content
     new_menu_lines = []
+    insights_active = active_href in ["insights.html", "faq.html"]
+    
     for href, label in menu_items_def:
-        if href == active_href:
-            new_menu_lines.append(f'                    <li><a href="{href}" class="active-link">{label}</a></li>')
+        if href == "faq.html":
+            # Skip FAQ as a top-level link because it's inside the dropdown now
+            continue
+            
+        if href == "insights.html":
+            active_class = ' class="active-link"' if insights_active else ''
+            faq_active_class = ' class="active-link"' if active_href == "faq.html" else ''
+            new_menu_lines.append(f'                    <li class="dropdown">\n                        <a href="insights.html"{active_class} class="dropdown-toggle">INSIGHTS <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px; vertical-align: middle;"></i></a>\n                        <ul class="dropdown-menu">\n                            <li><a href="faq.html"{faq_active_class}>FAQ</a></li>\n                        </ul>\n                    </li>')
         else:
-            new_menu_lines.append(f'                    <li><a href="{href}">{label}</a></li>')
+            if href == active_href:
+                new_menu_lines.append(f'                    <li><a href="{href}" class="active-link">{label}</a></li>')
+            else:
+                new_menu_lines.append(f'                    <li><a href="{href}">{label}</a></li>')
     
     new_menu_content = "\n" + "\n".join(new_menu_lines) + "\n                "
-    new_nav_block = f"{prefix}{new_menu_content}{suffix}"
+    new_nav_block = f"{prefix}\n                <ul class=\"nav-links\">{new_menu_content}</ul>\n            {suffix}"
     
     updated_content = nav_pattern.sub(new_nav_block, content)
     
