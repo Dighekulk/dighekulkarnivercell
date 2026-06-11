@@ -68,245 +68,106 @@
                 <p style="max-width: 850px; color: var(--text-dark); font-size: 1.2rem; line-height: 1.7; text-align: center; margin: 0 auto; opacity: 0.9;">Growth creates new organisational and leadership challenges that strategy alone cannot solve. Leadership teams often experience:</p>
             </div>
             
-            <div class="scroller-wrapper position-relative mb-5">
-                <div class="challenge-scroller-track">
-                    <!-- Card 1 -->
-                    <div class="card animate-on-scroll challenge-card">
-                        <div class="challenge-img-container">
-                            <img src="images/reduce_complexity.jpg" alt="Decision-making bottlenecks" class="challenge-img" width="400" height="240">
-                            <span class="challenge-number-badge">01</span>
-                        </div>
-                        <div class="challenge-content">
-                            <h4>Decision-making bottlenecks</h4>
-                            <p>Decisions pile up at the executive level, slowing operational momentum as leaders become the ultimate operational bottleneck.</p>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="card animate-on-scroll challenge-card">
-                        <div class="challenge-img-container">
-                            <img src="images/leadership_discipline.jpg" alt="Leadership bandwidth stretched too thin" class="challenge-img" width="400" height="240">
-                            <span class="challenge-number-badge">02</span>
-                        </div>
-                        <div class="challenge-content">
-                            <h4>Leadership bandwidth stretched too thin</h4>
-                            <p>Founders and senior executives spend their days firefighting operational friction rather than focusing on strategic growth and horizon planning.</p>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="card animate-on-scroll challenge-card">
-                        <div class="challenge-img-container">
-                            <img src="images/functional_design.jpg" alt="Unclear accountability across teams" class="challenge-img" width="400" height="240">
-                            <span class="challenge-number-badge">03</span>
-                        </div>
-                        <div class="challenge-content">
-                            <h4>Unclear accountability across teams</h4>
-                            <p>Ambiguity across roles leads to dropped balls, duplicated effort, and internal friction when key execution milestones are missed.</p>
-                        </div>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="card animate-on-scroll challenge-card">
-                        <div class="challenge-img-container">
-                            <img src="images/collab_new.png" alt="Functional silos slowing execution" class="challenge-img" width="400" height="240">
-                            <span class="challenge-number-badge">04</span>
-                        </div>
-                        <div class="challenge-content">
-                            <h4>Functional silos slowing execution</h4>
-                            <p>Departments operate in isolation with competing priorities, creating friction where seamless cross-functional integration is needed.</p>
-                        </div>
-                    </div>
-                    <!-- Card 5 -->
-                    <div class="card animate-on-scroll challenge-card">
-                        <div class="challenge-img-container">
-                            <img src="images/scalable_growth.png" alt="Governance not keeping pace with growth" class="challenge-img" width="400" height="240">
-                            <span class="challenge-number-badge">05</span>
-                        </div>
-                        <div class="challenge-content">
-                            <h4>Governance not keeping pace with growth</h4>
-                            <p>Informal communication habits and legacy operating cadences break down under the weight of scaling operations and rapid headcount growth.</p>
-                        </div>
-                    </div>
-                    <!-- Card 6 -->
-                    <div class="card animate-on-scroll challenge-card">
-                        <div class="challenge-img-container">
-                            <img src="images/agility_speed.png" alt="Inconsistent execution despite strong talent" class="challenge-img" width="400" height="240">
-                            <span class="challenge-number-badge">06</span>
-                        </div>
-                        <div class="challenge-content">
-                            <h4>Inconsistent execution despite strong talent</h4>
-                            <p>Despite hiring top-tier individual talent, overall organisational output remains unpredictable and difficult to scale repeatedly.</p>
-                        </div>
-                    </div>
-                    <!-- Card 7 -->
-                    <div class="card animate-on-scroll challenge-card">
-                        <div class="challenge-img-container">
-                            <img src="images/portfolio_value.jpg" alt="Limited succession depth and leadership readiness" class="challenge-img" width="400" height="240">
-                            <span class="challenge-number-badge">07</span>
-                        </div>
-                        <div class="challenge-content">
-                            <h4>Limited succession depth and leadership readiness</h4>
-                            <p>A lack of ready successors creates critical vulnerability, making the operating model highly fragile if key individuals transition out.</p>
-                        </div>
-                    </div>
+            <div class="challenge-list-container">
+                <div class="challenge-left-col">
+                    <ul class="challenge-bullets">
+                        <li><span class="bullet-icon"></span>Decision-making bottlenecks</li>
+                        <li><span class="bullet-icon"></span>Leadership bandwidth stretched too thin</li>
+                        <li><span class="bullet-icon"></span>Unclear accountability across teams</li>
+                    </ul>
                 </div>
-                
-                <!-- Navigation Arrows Floating on left and right -->
-                <button class="scroller-arrow prev-arrow" onclick="document.querySelector('.challenge-scroller-track').scrollBy({left: -415, behavior: 'smooth'})" aria-label="Previous">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </button>
-                <button class="scroller-arrow next-arrow" onclick="document.querySelector('.challenge-scroller-track').scrollBy({left: 415, behavior: 'smooth'})" aria-label="Next">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
+                <div class="challenge-right-col">
+                    <ul class="challenge-bullets">
+                        <li><span class="bullet-icon"></span>Governance not keeping pace with growth</li>
+                        <li><span class="bullet-icon"></span>Inconsistent execution despite strong talent</li>
+                        <li><span class="bullet-icon"></span>Limited succession depth and leadership readiness</li>
+                    </ul>
+                </div>
+                <div class="challenge-center-row">
+                    <ul class="challenge-bullets centered-bullet">
+                        <li><span class="bullet-icon"></span>Functional silos slowing execution</li>
+                    </ul>
+                </div>
             </div>
-            
-
         </div>
     </section>
 
     <style>
-    .scroller-wrapper {
-        position: relative;
-        width: 100%;
-        padding: 0 15px;
+    .challenge-list-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 80px;
+        row-gap: 30px;
+        margin: 40px auto 0;
+        max-width: 1150px;
     }
-    .challenge-scroller-track {
+    .challenge-left-col {
+        grid-column: 1;
+        padding-left: 60px;
+    }
+    .challenge-right-col {
+        grid-column: 2;
+    }
+    .challenge-center-row {
+        grid-column: 1 / span 2;
         display: flex;
-        gap: 35px;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE/Edge */
-        padding: 20px 15px 40px;
-        scroll-behavior: smooth;
-    }
-    .challenge-scroller-track::-webkit-scrollbar {
-        display: none; /* Chrome/Safari */
-    }
-    .challenge-card {
-        flex: 0 0 380px;
-        scroll-snap-align: start;
-        background: #ffffff;
-        border-radius: 20px;
-        text-align: left;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-        border: 1px solid rgba(0,0,0,0.05);
-        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-    }
-    .scroller-arrow {
-        position: absolute;
-        top: calc(50% - 20px);
-        transform: translateY(-50%);
-        width: 58px;
-        height: 58px;
-        border-radius: 50%;
-        background: #ffffff;
-        border: 1px solid rgba(0,0,0,0.08);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-        color: var(--primary-color);
-        font-size: 1.25rem;
-        display: flex;
-        align-items: center;
         justify-content: center;
-        cursor: pointer;
-        z-index: 20;
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        margin-top: 15px;
     }
-    .scroller-arrow:hover {
-        background: var(--secondary-color);
-        color: #ffffff;
-        border-color: var(--secondary-color);
-        transform: translateY(-50%) scale(1.15);
-    }
-    .prev-arrow {
-        left: -15px;
-    }
-    .next-arrow {
-        right: -15px;
-    }
-    .challenge-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(90deg, var(--secondary-color), var(--accent-gold));
-        opacity: 0;
-        transition: opacity 0.4s ease;
-        z-index: 10;
-    }
-    .challenge-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(21, 50, 57, 0.12);
-        border-color: rgba(191, 183, 129, 0.4);
-    }
-    .challenge-card:hover::before {
-        opacity: 1;
-    }
-    .challenge-img-container {
-        position: relative;
-        width: 100%;
-        height: 180px;
-        overflow: hidden;
-        border-bottom: 1px solid rgba(0,0,0,0.04);
-    }
-    .challenge-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
-    }
-    .challenge-card:hover .challenge-img {
-        transform: scale(1.08);
-    }
-    .challenge-number-badge {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background: rgba(21, 50, 57, 0.88);
-        backdrop-filter: blur(8px);
-        color: var(--accent-gold);
-        font-weight: 800;
-        font-size: 1.05rem;
-        padding: 4px 12px;
-        border-radius: 20px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        border: 1px solid rgba(191, 183, 129, 0.3);
-        z-index: 5;
-    }
-    .challenge-content {
-        padding: 24px 24px 20px;
-        flex-grow: 1;
+    .challenge-bullets {
+        list-style: none;
+        padding: 0;
+        margin: 0;
         display: flex;
         flex-direction: column;
-        white-space: normal;
+        gap: 30px;
     }
-    .challenge-card h4 {
-        font-size: 1.4rem;
+    .challenge-bullets.centered-bullet {
+        align-items: center;
+    }
+    .challenge-bullets li {
+        font-family: 'El Messiri', sans-serif;
+        font-size: 1.35rem;
         font-weight: 700;
         color: var(--primary-color);
-        margin-bottom: 10px;
-        line-height: 1.3;
+        line-height: 1.4;
+        display: flex;
+        align-items: flex-start;
     }
-    .challenge-card p {
-        font-size: 1.08rem;
-        line-height: 1.65;
-        color: var(--text-dark);
-        opacity: 0.88;
-        margin: 0;
+    .bullet-icon {
+        width: 10px;
+        height: 10px;
+        background-color: var(--accent-gold);
+        border-radius: 50%;
+        margin-right: 18px;
+        margin-top: 10px;
+        flex-shrink: 0;
+        box-shadow: 0 0 6px rgba(191, 183, 129, 0.6);
     }
-    @media (max-width: 768px) {
-        .challenge-card {
-            flex: 0 0 310px;
+    @media (max-width: 900px) {
+        .challenge-list-container {
+            grid-template-columns: 1fr;
+            gap: 25px;
+            padding: 0 10px;
         }
-        .challenge-img-container {
-            height: 200px;
+        .challenge-left-col, .challenge-right-col {
+            grid-column: auto;
+            padding-left: 0;
         }
-        .prev-arrow { left: 0px; }
-        .next-arrow { right: 0px; }
+        .challenge-center-row {
+            grid-column: auto;
+            justify-content: flex-start;
+            margin-top: 0;
+        }
+        .challenge-bullets.centered-bullet {
+            align-items: flex-start;
+        }
+        .challenge-bullets {
+            gap: 25px;
+        }
+        .challenge-bullets li {
+            font-size: 1.2rem;
+        }
     }
     </style>
 
@@ -411,37 +272,27 @@
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1150px; margin: 0 auto;">
                 <!-- Card 1 -->
                 <div class="animate-on-scroll changes-card">
-                    <div class="img-container">
-                        <img src="images/work_enable.png" alt="Decisions">
-                    </div>
+                    <div class="number-container">01</div>
                     <p>Decisions move to the right level, so leaders are no longer the bottleneck</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="animate-on-scroll changes-card">
-                    <div class="img-container">
-                        <img src="images/work_diagnose.png" alt="Accountability">
-                    </div>
+                    <div class="number-container">02</div>
                     <p>Accountability is clear, and people know what they own</p>
                 </div>
                 <!-- Card 3 -->
                 <div class="animate-on-scroll changes-card">
-                    <div class="img-container">
-                        <img src="images/leadership_alignment.png" alt="Leadership bandwidth">
-                    </div>
+                    <div class="number-container">03</div>
                     <p>Leadership bandwidth goes to work that actually needs it</p>
                 </div>
                 <!-- Card 4 -->
                 <div class="animate-on-scroll changes-card">
-                    <div class="img-container">
-                        <img src="images/collab_new.png" alt="Functions connect">
-                    </div>
+                    <div class="number-container">04</div>
                     <p>Functions connect rather than compete</p>
                 </div>
                 <!-- Card 5 -->
                 <div class="animate-on-scroll changes-card">
-                    <div class="img-container">
-                        <img src="images/operational_efficiency.png" alt="Rhythm">
-                    </div>
+                    <div class="number-container">05</div>
                     <p>The business runs on rhythm, not heroics</p>
                 </div>
             </div>
@@ -467,23 +318,28 @@
         transform: translateY(-5px);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
     }
-    .changes-card .img-container {
+    .changes-card .number-container {
         flex-shrink: 0;
         width: 75px;
         height: 75px;
         border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background: rgba(121, 166, 184, 0.12);
         border: 2px solid rgba(191, 183, 129, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'El Messiri', sans-serif;
+        font-size: 2.1rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
-    .changes-card .img-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.4s ease;
-    }
-    .changes-card:hover .img-container img {
-        transform: scale(1.1);
+    .changes-card:hover .number-container {
+        background: var(--primary-color);
+        color: #ffffff;
+        border-color: var(--accent-gold);
+        transform: scale(1.05);
     }
     .changes-card p {
         margin: 0;
@@ -529,28 +385,28 @@
             </div>
             
             <div class="cards-grid-4 why-cards-row" style="gap: 30px; margin-top: 0; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-                <div class="card animate-on-scroll" style="text-align: left; padding: 35px 28px; background: #ffffff; border-radius: 16px; border: 1px solid rgba(0, 0, 0, 0.04); border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
+                <div class="card animate-on-scroll" style="text-align: left; padding: 35px 28px; background: #ffffff; border-radius: 16px; border: 1px solid rgba(191, 183, 129, 0.45); border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
                     <div style="width: 55px; height: 55px; border-radius: 50%; background: rgba(191, 183, 129, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--primary-color);">
                         <i class="fa-solid fa-graduation-cap" style="font-size: 1.5rem;"></i>
                     </div>
                     <h3 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 12px; font-weight: 700; line-height: 1.4;">Enterprise-grade thinking. Practical execution.</h3>
                     <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0;">Deep organisation and leadership transformation expertise, in a focused model built for scaling businesses.</p>
                 </div>
-                <div class="card animate-on-scroll" style="text-align: left; padding: 35px 28px; background: #ffffff; border-radius: 16px; border: 1px solid rgba(0, 0, 0, 0.04); border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
+                <div class="card animate-on-scroll" style="text-align: left; padding: 35px 28px; background: #ffffff; border-radius: 16px; border: 1px solid rgba(191, 183, 129, 0.45); border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
                     <div style="width: 55px; height: 55px; border-radius: 50%; background: rgba(191, 183, 129, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--primary-color);">
                         <i class="fa-solid fa-bullseye" style="font-size: 1.5rem;"></i>
                     </div>
                     <h3 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 12px; font-weight: 700; line-height: 1.4;">Business-first approach.</h3>
                     <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0;">Our focus is the operational reality: governance, leadership alignment, accountability, and execution outcomes.</p>
                 </div>
-                <div class="card animate-on-scroll" style="text-align: left; padding: 35px 28px; background: #ffffff; border-radius: 16px; border: 1px solid rgba(0, 0, 0, 0.04); border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
+                <div class="card animate-on-scroll" style="text-align: left; padding: 35px 28px; background: #ffffff; border-radius: 16px; border: 1px solid rgba(191, 183, 129, 0.45); border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
                     <div style="width: 55px; height: 55px; border-radius: 50%; background: rgba(191, 183, 129, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--primary-color);">
                         <i class="fa-solid fa-magnifying-glass-chart" style="font-size: 1.5rem;"></i>
                     </div>
                     <h3 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 12px; font-weight: 700; line-height: 1.4;">Focused and targeted.</h3>
                     <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin: 0;">We isolate what most constrains execution and scale, enabling sharper interventions rather than broad redesign.</p>
                 </div>
-                <div class="card animate-on-scroll" style="text-align: left; padding: 35px 28px; background: #ffffff; border-radius: 16px; border: 1px solid rgba(0, 0, 0, 0.04); border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
+                <div class="card animate-on-scroll" style="text-align: left; padding: 35px 28px; background: #ffffff; border-radius: 16px; border: 1px solid rgba(191, 183, 129, 0.45); border-top: 4px solid var(--accent-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
                     <div style="width: 55px; height: 55px; border-radius: 50%; background: rgba(191, 183, 129, 0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--primary-color);">
                         <i class="fa-solid fa-handshake-angle" style="font-size: 1.5rem;"></i>
                     </div>

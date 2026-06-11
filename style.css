@@ -405,7 +405,7 @@ header {
         padding: 100px 0 40px;
         /* Reduced top padding for header clearance */
         background: linear-gradient(180deg, rgba(21, 50, 57, 0.7) 0%, rgba(21, 50, 57, 0.55) 50%, rgba(21, 50, 57, 0.25) 100%),
-            url('images/hero_bg_latest.png');
+            url('images/hero_bg_latest_v2.png');
         background-size: cover;
         background-position: center;
         align-items: flex-start;
@@ -438,9 +438,10 @@ header {
     min-height: 450px;
     /* Gradient from solid Dark Teal (left) to transparent (right) */
     background: linear-gradient(90deg, rgba(21, 50, 57, 0.75) 10%, rgba(21, 50, 57, 0.55) 40%, rgba(21, 50, 57, 0.25) 60%, rgba(21, 50, 57, 0) 100%),
-        url('images/hero_bg_latest.png');
-    background-size: cover;
-    background-position: center right;
+        url('images/hero_bg_latest_v2.png');
+    background-size: 125%;
+    background-position: left 20%;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     color: var(--bg-white);
@@ -473,7 +474,7 @@ header {
 }
 
 .hero-content {
-    max-width: 650px;
+    max-width: 580px;
     /* Increased to fit text better */
     position: relative;
     z-index: 1;
@@ -625,7 +626,7 @@ header {
 /* Values Section */
 .values {
     padding: var(--padding-section);
-    background: linear-gradient(135deg, rgba(21, 50, 57, 0.6), rgba(32, 70, 80, 0.5)), url('images/hero_banner.jpg');
+    background: linear-gradient(135deg, rgba(21, 50, 57, 0.9), rgba(32, 70, 80, 0.85)), url('images/hero_banner.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

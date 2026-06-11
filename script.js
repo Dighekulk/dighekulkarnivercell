@@ -357,6 +357,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setupMobileCarousel(".deliver-list", ".scroller-dots-container");
     setupMobileCarousel(".process-grid", ".scroller-dots-container");
 
+
 });
 
 // Read More Toggle for Collaborators

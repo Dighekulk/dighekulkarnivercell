@@ -32,15 +32,7 @@
             color: #fff;
             position: relative;
         }
-        .service-hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60px;
-            background: linear-gradient(to top, #F8FAFC, transparent);
-        }
+
 
         .overview-grid {
             display: grid;
@@ -255,6 +247,52 @@
             .story-card {
                 width: 100%;
                 max-width: 100%;
+            }
+        }
+
+        /* Alternating Stage Rows */
+        .stage-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        .stage-row:last-child {
+            margin-bottom: 0;
+        }
+        .stage-row.reverse {
+            direction: rtl;
+        }
+        .stage-row.reverse .story-card, .stage-row.reverse .stage-image-wrapper {
+            direction: ltr;
+        }
+        .stage-row .story-card {
+            width: 100%;
+        }
+        .stage-image-wrapper {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: transform 0.4s ease;
+        }
+        .stage-image-wrapper:hover {
+            transform: translateY(-5px);
+        }
+        .stage-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .stage-row {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                margin-bottom: 50px;
+            }
+            .stage-row.reverse {
+                direction: ltr;
             }
         }
 
@@ -740,34 +778,11 @@
         </div>
     </section>
 
-    <!-- THE ORG EXECUTION DIAGNOSTIC WITH PREMIUM VISUAL -->
-    <section style="padding: 60px 0; background: #ffffff;" class="animate-on-scroll">
-        <div class="container">
-            <div class="diagnostic-box">
-                <div style="position: relative; z-index: 2;">
-                    <span style="color: var(--accent-gold); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 10px; text-align: left;">THE ORG EXECUTION DIAGNOSTIC</span>
-                    <h2 style="color: #ffffff; font-size: 2.8rem; margin-bottom: 15px; line-height: 1.2; text-align: left; font-weight: 800;">The Org Execution Readiness Diagnostic</h2>
-                    <h3 style="color: var(--accent-gold); font-size: 1.6rem; margin-bottom: 25px; font-weight: 500; text-align: left;">A clear read of what’s really constraining execution.</h3>
-                    <p style="color: #ffffff; font-size: 1.2rem; line-height: 1.7; opacity: 0.9; margin-bottom: 25px; text-align: left;">Our proprietary diagnostic. It examines how the whole organisation works in practice: the operating model, governance, leadership, accountability, and the systems that carry execution. It isolates where performance is actually being lost.</p>
-                    <p style="color: #ffffff; font-size: 1.15rem; line-height: 1.7; opacity: 0.9; margin-bottom: 30px; padding-left: 20px; border-left: 3px solid var(--accent-gold); text-align: left;"><strong>What you get:</strong> One evidence-based view of where the organisation is strong, where it’s exposed, and the few changes that will move performance most, so leadership can act on clear priorities rather than broad or unnecessary redesign.</p>
-                    <div style="display: inline-block; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 15px 25px; border-radius: 12px; text-align: left;">
-                        <p style="color: var(--accent-gold); margin: 0; font-weight: 600; font-size: 1.05rem; text-align: left;"><i class="fa-solid fa-chart-line" style="margin-right: 10px;"></i> For PE funds and portfolio companies, it runs as the Execution Risk Diagnostic, calibrated to deal pace.</p>
-                    </div>
-                </div>
-                <!-- Premium Dashboard/Visual on Right -->
-                <div style="position: relative; z-index: 2; text-align: center;" class="animate-on-scroll">
-                    <img src="images/framework_design.png" alt="Diagnostic Framework" style="width: 100%; max-width: 420px; height: auto; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3)); transform: perspective(1000px) rotateY(-5deg); transition: transform 0.5s ease;">
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- SERVICES -->
     <section style="background-color: #F8FAFC; padding: 60px 0;" class="animate-on-scroll">
         <div class="container">
             <div style="text-align: center; margin-bottom: 40px;" class="animate-on-scroll">
-                <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 10px;">OUR SERVICES</span>
-                <h2 class="section-title text-center" style="font-size: 2.8rem; margin-bottom: 15px; margin-top: 0; font-weight: 800; color: var(--primary-color);">Organisation Design & Effectiveness</h2>
+                <h2 class="section-title text-center" style="font-size: 0.95rem; margin-bottom: 15px; margin-top: 0; font-weight: 800; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 2px;">SERVICES</h2>
             </div>
 
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto;">
@@ -805,17 +820,38 @@
         </div>
     </section>
 
+    <!-- THE ORG EXECUTION DIAGNOSTIC WITH PREMIUM VISUAL -->
+    <section style="padding: 60px 0; background: #ffffff;" class="animate-on-scroll">
+        <div class="container">
+            <div class="diagnostic-box">
+                <div style="position: relative; z-index: 2;">
+                    <span style="color: var(--accent-gold); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 10px; text-align: left;">THE ORG EXECUTION DIAGNOSTIC</span>
+                    <h2 style="color: #ffffff; font-size: 2.8rem; margin-bottom: 15px; line-height: 1.2; text-align: left; font-weight: 800;">The Org Execution Readiness Diagnostic</h2>
+                    <h3 style="color: var(--accent-gold); font-size: 1.6rem; margin-bottom: 25px; font-weight: 500; text-align: left;">A clear read of what’s really constraining execution.</h3>
+                    <p style="color: #ffffff; font-size: 1.2rem; line-height: 1.7; opacity: 0.9; margin-bottom: 25px; text-align: left;">Our proprietary diagnostic. It examines how the whole organisation works in practice: the operating model, governance, leadership, accountability, and the systems that carry execution. It isolates where performance is actually being lost.</p>
+                    <p style="color: #ffffff; font-size: 1.15rem; line-height: 1.7; opacity: 0.9; margin-bottom: 30px; padding-left: 20px; border-left: 3px solid var(--accent-gold); text-align: left;"><strong>What you get:</strong> One evidence-based view of where the organisation is strong, where it’s exposed, and the few changes that will move performance most, so leadership can act on clear priorities rather than broad or unnecessary redesign.</p>
+                    <div style="display: inline-block; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 15px 25px; border-radius: 12px; text-align: left;">
+                        <p style="color: var(--accent-gold); margin: 0; font-weight: 600; font-size: 1.05rem; text-align: left;"><i class="fa-solid fa-chart-line" style="margin-right: 10px;"></i> For PE funds and portfolio companies, it runs as the Execution Risk Diagnostic, calibrated to deal pace.</p>
+                    </div>
+                </div>
+                <!-- Premium Dashboard/Visual on Right -->
+                <div style="position: relative; z-index: 2; text-align: center;" class="animate-on-scroll">
+                    <img src="images/framework_design.png" alt="Diagnostic Framework" style="width: 100%; max-width: 420px; height: auto; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3)); transform: perspective(1000px) rotateY(-5deg); transition: transform 0.5s ease;">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- HOW WE WORK (STORY TIMELINE) -->
     <section style="padding: 100px 0; background: #ffffff;" class="animate-on-scroll">
         <div class="container" style="max-width: 1200px;">
             <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; text-align: center; margin-bottom: 12px;">HOW WE WORK</span>
             <h2 class="section-title text-center" style="font-size: 2.8rem; margin-bottom: 60px;">Four stages, from intent to lasting change.</h2>
 
-            <div class="story-timeline">
-                <div class="story-line"></div>
+            <div class="story-timeline-new" style="max-width: 1100px; margin: 0 auto;">
                 
                 <!-- Stage 1 -->
-                <div class="story-step center animate-on-scroll">
+                <div class="stage-row animate-on-scroll">
                     <div class="story-card">
                         <div class="story-badge">01</div>
                         <span class="story-stage-name">STAGE ONE</span>
@@ -827,11 +863,13 @@
                             <span><i class="fa-solid fa-circle-check"></i> Capability priorities</span>
                         </div>
                     </div>
+                    <div class="stage-image-wrapper">
+                        <img src="images/work_diagnose.png" alt="Diagnose Phase">
+                    </div>
                 </div>
 
                 <!-- Stage 2 -->
-                <div class="story-step left animate-on-scroll">
-                    <div class="story-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="stage-row reverse animate-on-scroll">
                     <div class="story-card">
                         <div class="story-badge">02</div>
                         <span class="story-stage-name">STAGE TWO</span>
@@ -843,11 +881,13 @@
                             <span><i class="fa-solid fa-circle-check"></i> Governance & cadences</span>
                         </div>
                     </div>
+                    <div class="stage-image-wrapper">
+                        <img src="images/work_design.png" alt="Architect Phase">
+                    </div>
                 </div>
 
                 <!-- Stage 3 -->
-                <div class="story-step right animate-on-scroll">
-                    <div class="story-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="stage-row animate-on-scroll">
                     <div class="story-card">
                         <div class="story-badge">03</div>
                         <span class="story-stage-name">STAGE THREE</span>
@@ -859,11 +899,13 @@
                             <span><i class="fa-solid fa-circle-check"></i> Detailed interfaces</span>
                         </div>
                     </div>
+                    <div class="stage-image-wrapper">
+                        <img src="images/framework_design.png" alt="Detail Phase">
+                    </div>
                 </div>
 
                 <!-- Stage 4 -->
-                <div class="story-step center animate-on-scroll">
-                    <div class="story-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="stage-row reverse animate-on-scroll">
                     <div class="story-card">
                         <div class="story-badge">04</div>
                         <span class="story-stage-name">STAGE FOUR</span>
@@ -874,6 +916,9 @@
                             <span><i class="fa-solid fa-circle-check"></i> Change activation</span>
                             <span><i class="fa-solid fa-circle-check"></i> Capability building</span>
                         </div>
+                    </div>
+                    <div class="stage-image-wrapper">
+                        <img src="images/org_activation.png" alt="Activate Phase">
                     </div>
                 </div>
             </div>
@@ -927,7 +972,7 @@
     <!-- SELECTED WORK (CASE STUDIES SCROLLER) -->
     <section class="case-studies animate-on-scroll" id="case-studies" style="padding: 60px 0; background: #ffffff;">
         <div class="container">
-            <span style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; text-align: center; margin-bottom: 15px;">SELECTED WORK</span>
+            <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; text-align: center; margin-bottom: 15px;">SELECTED WORK</span>
             <p style="max-width: 800px; margin: 0 auto 50px; text-align: center; font-size: 1.15rem; color: var(--text-dark);">A selection of engagements, the kind of organisational challenges we work on. Each links to its full case study.</p>
 
             <div class="case-study-scroller">
