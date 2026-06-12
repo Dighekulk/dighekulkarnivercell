@@ -1,5 +1,5 @@
 ---
-title: "GenAI and the Future of Organisation Design: A Global Perspective with an Indian Lens"
+title: "GenAI and the Future of Organization Design: A Global Perspective with an Indian Lens"
 date: 2025-09-20
 image: "images/genai_future.jpg"
 excerpt: "By mid-2025, Generative AI (GenAI) is no longer an emerging trend—it is an embedded force, transforming how businesses operate across sectors, geographies, and functions."
@@ -10,15 +10,15 @@ By mid-2025, Generative AI (GenAI) is no longer an emerging trend—it is an emb
 
 From content generation and customer engagement to data analysis and decision support, GenAI is shifting the nature of work itself. But as companies rush to adopt AI tools, a critical question remains unanswered:
 
-**Are we designing our organisations to actually use them?**
+**Are we designing our organizations to actually use them?**
 
 Most companies are evolving their tech stacks—but not their operating models. Tools are changing, but structures, roles, and workflows are often stuck in a pre-AI era. This disconnect limits the value of GenAI and increases friction, risk, and inefficiency.
 
-To harness AI’s full potential, organisation design must evolve alongside it—not as an HR initiative, but as a core leadership responsibility.
+To harness AI’s full potential, organization design must evolve alongside it—not as an HR initiative, but as a core leadership responsibility.
 
 ### Globally: Work Is Changing—And So Must Design
 
-Around the world, leading organisations are reimagining how work gets done with GenAI. They’re not just automating tasks—they’re redesigning how people, machines, and teams interact.
+Around the world, leading organizations are reimagining how work gets done with GenAI. They’re not just automating tasks—they’re redesigning how people, machines, and teams interact.
 
 Some of the shifts already underway include:
 
@@ -31,21 +31,21 @@ AI tools deliver instant insights and recommendations, reducing delays and decen
 * **Reconfiguring end-to-end journeys**
 Customer onboarding, claims processing, product design, and campaign planning are being restructured to work in AI-augmented cycles.
 
-But here's the catch: layering GenAI on top of legacy structures is not enough. Without rethinking organisation design, AI adoption stalls or—even worse—introduces new risks.
+But here's the catch: layering GenAI on top of legacy structures is not enough. Without rethinking organization design, AI adoption stalls or—even worse—introduces new risks.
 
-### Four Ways Organisation Design Is Evolving
+### Four Ways Organization Design Is Evolving
 
-To unlock the promise of GenAI, organisations must rethink four foundational design dimensions:
+To unlock the promise of GenAI, organizations must rethink four foundational design dimensions:
 
 **1. Redefining Roles for Human–AI Collaboration**
 As AI takes over repetitive tasks, human roles must shift toward judgment, oversight, creativity, and contextual understanding.
-Organisation design must:
+Organization design must:
 * Reimagine job profiles to include AI fluency
 * Introduce new roles (e.g., prompt engineers, AI ethicists, explainability leads)
 * Clarify workflows where AI leads, and where human intervention is critical
 
 **2. Enhancing Connection to Accelerate Decisions**
-GenAI dramatically shortens the distance between insight and action. But to realise this potential, organisations must reduce friction in how decisions are made—not necessarily by flattening hierarchies, but by improving connectivity, flow of information, and access to authority.
+GenAI dramatically shortens the distance between insight and action. But to realise this potential, organizations must reduce friction in how decisions are made—not necessarily by flattening hierarchies, but by improving connectivity, flow of information, and access to authority.
 Design must:
 * Enable faster decision-making by clarifying who decides what, and when
 * Strengthen vertical and horizontal connections between teams, functions, and leadership layers
@@ -70,7 +70,7 @@ Design must:
 
 ### With an Indian Lens: The Challenge and Opportunity
 
-India represents one of the most dynamic markets for GenAI adoption—due to its combination of deep digital talent, growing enterprise maturity, and sheer scale. But Indian organisations also face a set of distinctive tensions:
+India represents one of the most dynamic markets for GenAI adoption—due to its combination of deep digital talent, growing enterprise maturity, and sheer scale. But Indian organizations also face a set of distinctive tensions:
 
 * **Scale + Speed**
 India is scaling rapidly. Yet legacy structures and hierarchical cultures often slow down execution. GenAI demands flatter, faster models.
@@ -81,7 +81,7 @@ India offers exceptional tech talent but also faces high attrition and rising ca
 * **Global Reach + Local Relevance**
 Indian firms often operate under global frameworks while delivering to local markets. This calls for dual-operating models—balancing standardisation with contextual flexibility.
 
-### Four Design Imperatives for Indian Organisations
+### Four Design Imperatives for Indian Organizations
 
 To remain competitive, Indian firms must act decisively:
 
@@ -111,9 +111,9 @@ Whether leading a global firm with Indian operations or a domestic enterprise wi
 
 ### Final Word: Design Is the Missing Link Between AI and Impact
 
-GenAI is changing the what of work. Organisation design must now change the how.
+GenAI is changing the what of work. Organization design must now change the how.
 
-Globally, the most forward-thinking companies aren’t just investing in AI—they’re redesigning their organisations to unleash it. In India, where transformation meets tradition, the stakes are even higher.
+Globally, the most forward-thinking companies aren’t just investing in AI—they’re redesigning their organizations to unleash it. In India, where transformation meets tradition, the stakes are even higher.
 
 Those who rethink roles, simplify structures, enable faster decisions, and embed responsible AI governance will move from experimentation to true competitive advantage.
 

@@ -1,20 +1,20 @@
 ---
-title: "Design the Organisation for Strategy—Not Just for Leaders"
+title: "Design the Organization for Strategy—Not Just for Leaders"
 date: 2025-10-05
 image: "images/strategic_realignment_new.jpg"
-excerpt: "Organisation design is one of the most powerful tools leaders have to translate strategy into execution. It shapes how decisions are made, how teams collaborate, and how value flows through the business."
+excerpt: "Organization design is one of the most powerful tools leaders have to translate strategy into execution. It shapes how decisions are made, how teams collaborate, and how value flows through the business."
 readTime: "5 min read"
 ---
 
-Organisation design is one of the most powerful tools leaders have to translate strategy into execution. It shapes how decisions are made, how teams collaborate, and how value flows through the business.
+Organization design is one of the most powerful tools leaders have to translate strategy into execution. It shapes how decisions are made, how teams collaborate, and how value flows through the business.
 
 During periods of growth or transition, design decisions are often influenced by a range of factors beyond strategy alone. Leadership experience, individual strengths, and the need to retain key talent naturally play a role. These considerations are understandable and, in many cases, well intentioned.
 
 Over time, however, when roles, structures, or spans of control are shaped primarily around individuals rather than business needs, subtle misalignments can begin to emerge. What initially provides continuity or stability can gradually introduce complexity, slow decision making, or dilute accountability.
 
-As organisations evolve, these effects can make execution harder and reduce organisational agility. This is not a reflection of poor intent, but of the natural tension between people considerations and strategic clarity.
+As organizations evolve, these effects can make execution harder and reduce organizational agility. This is not a reflection of poor intent, but of the natural tension between people considerations and strategic clarity.
 
-When organisation design is anchored first in strategy, work requirements, and value creation, it becomes a powerful enabler of sustainable performance. In that context, the organisation is better equipped to scale, adapt, and deliver on its strategic ambitions.
+When organization design is anchored first in strategy, work requirements, and value creation, it becomes a powerful enabler of sustainable performance. In that context, the organization is better equipped to scale, adapt, and deliver on its strategic ambitions.
 
 ### Strategy First. Then Design. Then Leadership.
 
@@ -25,13 +25,13 @@ To apply it with rigour, leaders must commit to this sequence:
 **1. Start with strategy**
 What does the business need to deliver? What customer value, operating rhythm, or market capabilities are essential?
 
-**2. Design the organisation to enable that strategy**
+**2. Design the organization to enable that strategy**
 What structural choices—around roles, teams, workflows, and decision rights—will best support the delivery of these goals?
 
 **3. Then place and develop leaders within that model**
 Do we have the leadership capabilities to operate effectively in this design? If not, how will we build them?
 
-This order—strategy → design → leadership—is not optional. When it’s reversed, organisations become hostage to legacy preferences rather than future needs.
+This order—strategy → design → leadership—is not optional. When it’s reversed, organizations become hostage to legacy preferences rather than future needs.
 
 ### What Goes Wrong When We Design Around Leaders
 
@@ -59,10 +59,10 @@ Just because someone thrived under the old model doesn’t guarantee they will e
 
 ### Design and Leadership Should Reinforce Each Other
 
-The most effective organisations don’t trade-off between structural clarity and leadership alignment. They design for the future—and prepare their leaders to operate within it.
+The most effective organizations don’t trade-off between structural clarity and leadership alignment. They design for the future—and prepare their leaders to operate within it.
 
 This creates a reinforcing loop:
-* Strategy drives the organisation’s design.
+* Strategy drives the organization’s design.
 * Design defines how the business should work.
 * Leaders are selected and supported to bring that design to life.
 * And through this alignment, execution improves and momentum builds.
@@ -71,7 +71,7 @@ When strategy, structure, and leadership are synchronized, teams operate with gr
 
 ### Design with Courage, Lead with Clarity
 
-Organisation design is not about drawing charts to suit personalities. It’s about creating the conditions for sustained success.
+Organization design is not about drawing charts to suit personalities. It’s about creating the conditions for sustained success.
 
 That sometimes means making tough decisions: redesigning senior roles, clarifying accountability, or asking leaders to stretch beyond their comfort zones.
 
@@ -79,4 +79,4 @@ The critical question is not “Where should this person go?”
 
 It’s “What does our strategy require—and what kind of leadership will make it real?”
 
-When leaders approach design with this mindset, they move beyond reorganisation. They build a stronger bridge between ambition and action—and lay the foundation for long-term performance, adaptability, and growth.
+When leaders approach design with this mindset, they move beyond reorganization. They build a stronger bridge between ambition and action—and lay the foundation for long-term performance, adaptability, and growth.

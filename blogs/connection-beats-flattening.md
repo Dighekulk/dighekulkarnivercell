@@ -1,14 +1,14 @@
 ---
-title: "Rethinking Organisation Design: Why Connection Beats Flattening"
+title: "Rethinking Organization Design: Why Connection Beats Flattening"
 date: 2025-10-01
 image: "images/rethinking_connection.jpg"
-excerpt: "As markets shift and complexity rises, many organisations instinctively reach for structural fixes—flatten the hierarchy, break the silos, launch agile squads—in the hope of speeding up collaboration and innovation."
+excerpt: "As markets shift and complexity rises, many organizations instinctively reach for structural fixes—flatten the hierarchy, break the silos, launch agile squads—in the hope of speeding up collaboration and innovation."
 readTime: "5 min read"
 ---
 
 ### Designing for Connection, Not Just Structure
 
-As markets shift and complexity rises, many organisations instinctively reach for structural fixes—flatten the hierarchy, break the silos, launch agile squads—in the hope of speeding up collaboration and innovation.
+As markets shift and complexity rises, many organizations instinctively reach for structural fixes—flatten the hierarchy, break the silos, launch agile squads—in the hope of speeding up collaboration and innovation.
 
 Yet these changes often disappoint. Execution slows, accountability blurs, and teams struggle to stay aligned.
 
@@ -20,7 +20,7 @@ The real issue isn’t hierarchy.
 
 It’s connection.
 
-In modern organisations, the challenge isn’t having too many layers—it’s whether people can work across them with clarity, trust, and shared purpose.
+In modern organizations, the challenge isn’t having too many layers—it’s whether people can work across them with clarity, trust, and shared purpose.
 
 ### Hierarchy Isn’t the Enemy—Limited Horizontal Integration Is
 
@@ -36,11 +36,11 @@ What truly breaks down is what happens between the structures:
 
 These failures are not the product of hierarchy. They stem from ambiguous interfaces, misaligned incentives, and disconnected workflows.
 
-### What High-Performing Organisations Do Differently
+### What High-Performing Organizations Do Differently
 
-Top-performing organisations don’t eliminate structure. They design it deliberately to create clarity, connection, and coordinated execution.
+Top-performing organizations don’t eliminate structure. They design it deliberately to create clarity, connection, and coordinated execution.
 
-In these organisations:
+In these organizations:
 * Teams see how their work drives shared outcomes
 * Cross-functional collaboration is built into the design—not left to chance
 * Decision rights are explicit and understood
@@ -50,11 +50,11 @@ Crucially, they invest in integrators—roles, leaders, or routines that keep te
 
 ### Designing for Outcomes, Not Just Efficiency
 
-Too many organisations optimise for functional efficiency, even when it limits enterprise impact. This creates friction: teams chase their own KPIs rather than shared success.
+Too many organizations optimise for functional efficiency, even when it limits enterprise impact. This creates friction: teams chase their own KPIs rather than shared success.
 
 Evidence summarised by Gallup and other researchers, shows that teams with clear, jointly set goals achieve up to 30% higher productivity and about 50% lower turnover.
 
-To unlock this, organisation design must:
+To unlock this, organization design must:
 * Align cross-functional work around shared customer, product, or growth outcomes
 * Reinvent performance systems to value collaborative execution
 * Empower integrator roles (e.g., product owners, initiative leads) to resolve trade-offs with authority and support
@@ -77,7 +77,7 @@ Collaboration becomes reliable only when embedded into the operating model.
 
 ### The Leadership Imperative
 
-Even the best-designed organisation will fail without leadership that activates it.
+Even the best-designed organization will fail without leadership that activates it.
 
 Leaders must:
 * Escalate only when needed—and resolve issues quickly
@@ -91,9 +91,9 @@ Design sets the conditions. Leadership makes the design real.
 
 Flatter structures won’t create agility on their own. Removing silos won’t automatically improve collaboration.
 
-What today’s organisations need is design that enables connection—across teams, functions, geographies, and goals.
+What today’s organizations need is design that enables connection—across teams, functions, geographies, and goals.
 
-The future of organisation design isn’t about collapsing structures.
+The future of organization design isn’t about collapsing structures.
 It’s about building systems where collaboration is clear, coordinated, and rewarded.
 
-Organisations that get this right won’t just move faster; they’ll move smarter and move together.
+Organizations that get this right won’t just move faster; they’ll move smarter and move together.
