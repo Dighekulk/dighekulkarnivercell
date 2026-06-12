@@ -154,15 +154,18 @@
         }
 
         .service-card-premium {
-            background: #ffffff;
-            border-radius: 16px;
+            position: relative;
             overflow: hidden;
+            height: 400px;
+            border-radius: 16px;
+            background: #ffffff;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
             border: 1px solid rgba(0,0,0,0.04);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             display: flex;
             flex-direction: column;
             text-align: left;
+            cursor: pointer;
         }
 
         .service-card-premium:hover {
@@ -173,7 +176,7 @@
 
         .service-img-container {
             width: 100%;
-            height: 240px;
+            height: 72%;
             overflow: hidden;
             position: relative;
             background: #f1f5f9;
@@ -192,13 +195,55 @@
         }
 
         .service-content-body {
-            padding: 40px 35px;
-            flex-grow: 1;
+            padding: 16px 24px;
+            height: 28%;
+            background-color: #204650;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-sizing: border-box;
+            transition: background-color 0.4s ease;
+        }
+        .service-content-body h3 {
+            font-size: 1.45rem;
+            color: #ffffff;
+            margin: 0;
+            font-weight: 700;
+            line-height: 1.3;
+            font-family: 'El Messiri', sans-serif;
         }
 
+        .service-card-premium .hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #BFB781;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: 3;
+            border-radius: 16px;
+        }
+        .service-card-premium .hover-overlay p {
+            color: #153239;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        .service-card-premium:hover .hover-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
         @media (max-width: 1024px) {
             .overview-grid, .essence-box {
                 grid-template-columns: 1fr;
@@ -567,41 +612,41 @@
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 40px;">
                 <!-- Card 1 -->
-                <div class="service-card-premium animate-on-scroll" style="box-shadow: 0 12px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; background: #ffffff;">
-                    <div class="service-img-container" style="position: relative;">
+                <div class="service-card-premium animate-on-scroll">
+                    <div class="service-img-container">
                         <img src="images/leadership_deliver_readiness.png" alt="Leadership Assessment">
                     </div>
                     <div class="service-content-body">
-                        <div>
-                            <h3 style="font-size: 1.6rem; color: var(--primary-color); margin-bottom: 15px; font-weight: 700; line-height: 1.3;">Leadership Assessment</h3>
-                            <p style="color: var(--text-dark); font-size: 1.05rem; line-height: 1.6; margin: 0;">A rigorous, role-anchored view of a leader’s potential, capability, and fit against what the role demands. Built for senior decisions where the stakes are highest: CEO succession, external hire validation, PE portfolio leadership, and critical-role appointments.</p>
-                        </div>
+                        <h3>01. Leadership Assessment</h3>
+                    </div>
+                    <div class="hover-overlay">
+                        <p>A rigorous, role-anchored view of a leader’s potential, capability, and fit against what the role demands. Built for senior decisions where the stakes are highest: CEO succession, external hire validation, PE portfolio leadership, and critical-role appointments.</p>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="service-card-premium animate-on-scroll" style="box-shadow: 0 12px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; background: #ffffff;">
-                    <div class="service-img-container" style="position: relative;">
+                <div class="service-card-premium animate-on-scroll">
+                    <div class="service-img-container">
                         <img src="images/leadership_deliver_pathways.png" alt="Leadership Development & Coaching">
                     </div>
                     <div class="service-content-body">
-                        <div>
-                            <h3 style="font-size: 1.6rem; color: var(--primary-color); margin-bottom: 15px; font-weight: 700; line-height: 1.3;">Leadership Development & Coaching</h3>
-                            <p style="color: var(--text-dark); font-size: 1.05rem; line-height: 1.6; margin: 0;">Behaviour-focused development that shifts how leaders, managers, and functional teams operate day to day. Senior leadership programmes, manager acceleration, sales capability building, and executive coaching, anchored in strengths and reinforced beyond the workshop.</p>
-                        </div>
+                        <h3>02. Leadership Development & Coaching</h3>
+                    </div>
+                    <div class="hover-overlay">
+                        <p>Behaviour-focused development that shifts how leaders, managers, and functional teams operate day to day. Senior leadership programmes, manager acceleration, sales capability building, and executive coaching, anchored in strengths and reinforced beyond the workshop.</p>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="service-card-premium animate-on-scroll" style="box-shadow: 0 12px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05); border-radius: 16px; background: #ffffff;">
-                    <div class="service-img-container" style="position: relative;">
+                <div class="service-card-premium animate-on-scroll">
+                    <div class="service-img-container">
                         <img src="images/leadership_deliver_fit.png" alt="Succession Planning">
                     </div>
                     <div class="service-content-body">
-                        <div>
-                            <h3 style="font-size: 1.6rem; color: var(--primary-color); margin-bottom: 15px; font-weight: 700; line-height: 1.3;">Succession Planning</h3>
-                            <p style="color: var(--text-dark); font-size: 1.05rem; line-height: 1.6; margin: 0;">Structured planning for leadership transitions, building bench depth and continuity at the top. CEO and top-team succession, critical-role continuity, and the ongoing review architecture that keeps the plan live, not filed.</p>
-                        </div>
+                        <h3>03. Succession Planning</h3>
+                    </div>
+                    <div class="hover-overlay">
+                        <p>Structured planning for leadership transitions, building bench depth and continuity at the top. CEO and top-team succession, critical-role continuity, and the ongoing review architecture that keeps the plan live, not filed.</p>
                     </div>
                 </div>
             </div>
@@ -777,63 +822,48 @@
 
     <!-- Footer -->
         <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
+        <footer>
+        <div class="container" style="max-width: 1200px;">
+            <div class="footer-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 40px 0 20px 0; border-bottom: none;">
                 <div class="footer-info">
-                    <div style="margin-bottom: 20px;">
-                        <img src="images/logo.png" alt="Dighe Kulkarni Org Advisors" style="width: 200px; height: auto; filter: brightness(0) invert(1);">
-                    </div>
-                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">DKOA partners with PE-backed, founder-led, and scaling businesses to strengthen organisation systems and leadership effectiveness.</p>
-                    <div style="display: flex; gap: 15px;">
-                        <a href="https://www.linkedin.com/company/dighe-kulkarni-org-advisors" target="_blank" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 1.2rem; transition: all 0.3s ease;">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-info">
-                    <h4 style="color: #ffffff; font-size: 1.15rem; font-weight: 700; margin-bottom: 24px; position: relative; padding-bottom: 8px;">
-                        Quick Links
-                        <span style="position: absolute; bottom: 0; left: 0; width: 30px; height: 2px; background: var(--accent-gold);"></span>
-                    </h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
-                        <li><a href="index.html" style="color: rgba(255,255,255,0.8); font-size: 0.95rem; transition: color 0.3s ease;">Home</a></li>
-                        <li><a href="about.html" style="color: rgba(255,255,255,0.8); font-size: 0.95rem; transition: color 0.3s ease;">About Us</a></li>
-                        <li><a href="organization-design.html" style="color: rgba(255,255,255,0.8); font-size: 0.95rem; transition: color 0.3s ease;">Org Design</a></li>
-                        <li><a href="leadership-impact.html" style="color: rgba(255,255,255,0.8); font-size: 0.95rem; transition: color 0.3s ease;">Leadership Impact</a></li>
-                        <li><a href="blogs.html" style="color: rgba(255,255,255,0.8); font-size: 0.95rem; transition: color 0.3s ease;">Blogs</a></li>
-                        <li><a href="contact.html" style="color: rgba(255,255,255,0.8); font-size: 0.95rem; transition: color 0.3s ease;">Contact Us</a></li>
+                    <h3 style="color: #ffffff; font-family: 'El Messiri', sans-serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 25px;">Contact Us</h3>
+                    <ul class="contact-list" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 20px;">
+                        <li style="display: flex; gap: 15px; align-items: center; color: rgba(255, 255, 255, 0.85); font-size: 1.05rem;">
+                            <i class="fa-solid fa-envelope" style="font-size: 1.15rem; color: #ffffff; width: auto;"></i>
+                            <a href="mailto:orgadvisors@dighekulkarni.com" style="color: rgba(255, 255, 255, 0.85); text-decoration: none;">orgadvisors@dighekulkarni.com</a>
+                        </li>
+                        <li style="display: flex; gap: 15px; align-items: center; color: rgba(255, 255, 255, 0.85); font-size: 1.05rem;">
+                            <i class="fa-solid fa-phone" style="font-size: 1.15rem; color: #ffffff; width: auto;"></i>
+                            <a href="tel:+919987535478" style="color: rgba(255, 255, 255, 0.85); text-decoration: none;">+91 9987535478</a>
+                        </li>
+                        <li style="display: flex; gap: 15px; align-items: center; color: rgba(255, 255, 255, 0.85); font-size: 1.05rem;">
+                            <i class="fa-brands fa-linkedin-in" style="font-size: 1.15rem; color: #ffffff; width: auto;"></i>
+                            <a href="https://www.linkedin.com/company/dighe-kulkarni-org-advisors" target="_blank" style="color: rgba(255, 255, 255, 0.85); text-decoration: none;">Dighe Kulkarni</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-info">
-                    <h4 style="color: #ffffff; font-size: 1.15rem; font-weight: 700; margin-bottom: 24px; position: relative; padding-bottom: 8px;">
-                        Our Offices
-                        <span style="position: absolute; bottom: 0; left: 0; width: 30px; height: 2px; background: var(--accent-gold);"></span>
-                    </h4>
+                    <h3 style="color: #ffffff; font-family: 'El Messiri', sans-serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 25px;">Our Locations</h3>
                     <ul class="contact-list" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 20px;">
-                        <li style="display: flex; gap: 15px; align-items: flex-start; color: rgba(255, 255, 255, 0.85); font-size: 0.95rem;">
-                            <i class="fa-solid fa-location-dot" style="color: var(--accent-gold); font-size: 1.1rem; margin-top: 3px;"></i>
+                        <li style="display: flex; gap: 15px; align-items: flex-start; color: rgba(255, 255, 255, 0.85); font-size: 1.05rem; line-height: 1.5;">
+                            <i class="fa-solid fa-location-dot" style="font-size: 1.15rem; color: #ffffff; margin-top: 5px; width: auto;"></i>
                             <div>
-                                <strong>Mumbai (Head Office)</strong><br>
-                                We Work, 13th Floor, 247 Park, Vikhroli West, Mumbai, 400079
+                                <strong>Head Office:</strong><br>
+                                <span style="opacity: 0.9;">We Work, 13th Floor, 247 Park, Vikhroli West, Mumbai, 400079</span>
                             </div>
                         </li>
-                        <li style="display: flex; gap: 15px; align-items: flex-start; color: rgba(255, 255, 255, 0.85); font-size: 0.95rem;">
-                            <i class="fa-solid fa-location-dot" style="color: var(--accent-gold); font-size: 1.1rem; margin-top: 3px;"></i>
+                        <li style="display: flex; gap: 15px; align-items: flex-start; color: rgba(255, 255, 255, 0.85); font-size: 1.05rem; line-height: 1.5;">
+                            <i class="fa-solid fa-location-dot" style="font-size: 1.15rem; color: #ffffff; margin-top: 5px; width: auto;"></i>
                             <div>
-                                <strong>Singapore Office</strong><br>
-                                10 Anson Road #19-09 International Plaza, Singapore 079903
+                                <strong>Singapore Office:</strong><br>
+                                <span style="opacity: 0.9;">10 Anson Road #19-09 International Plaza Singapore 079903</span>
                             </div>
-                        </li>
-                        <li style="display: flex; gap: 15px; align-items: center; color: rgba(255, 255, 255, 0.85); font-size: 0.95rem; margin-top: 10px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
-                            <i class="fa-solid fa-envelope" style="color: var(--accent-gold); font-size: 1.1rem;"></i>
-                            <span>orgadvisors@dighekulkarni.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px; text-align: center; color: rgba(255, 255, 255, 0.6); font-size: 0.9rem;">
-                &copy; 2024 Dighe Kulkarni Org Advisors. All Rights Reserved.
+            <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 20px 0; text-align: center; color: rgba(255, 255, 255, 0.6); font-size: 0.95rem;">
+                &copy; 2024 Dighe Kulkarni. All Rights Reserved.
             </div>
         </div>
     </footer>
