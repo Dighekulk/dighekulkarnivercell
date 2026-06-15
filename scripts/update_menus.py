@@ -1,11 +1,11 @@
 import os
 import re
 
-html_dir = r"d:\Darshan\Coding\dighe-kulkarni-org-advisory-main"
+html_dir = r"d:\Darshan\Coding\Internship\dighe-kulkarni-org-advisory-main"
 
 menu_items_def = [
     ("index.html", "HOME"),
-    ("organization-design.html", "ORG DESIGN"),
+    ("organisation-design.html", "ORG DESIGN"),
     ("leadership-impact.html", "LEADERSHIP IMPACT"),
     ("about.html", "ABOUT US"),
     ("insights.html", "INSIGHTS"),

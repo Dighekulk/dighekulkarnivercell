@@ -8,7 +8,7 @@ const staticPages = [
     '',
     'index.html',
     'about.html',
-    'organization-design.html',
+    'organisation-design.html',
     'leadership-impact.html',
     'insights.html',
     'faq.html',
