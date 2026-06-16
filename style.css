@@ -4517,3 +4517,19 @@ footer {
         line-height: 1.5 !important;
     }
 }
+
+/* Case Study Card Button Bottom Alignment */
+.case-study-card {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.case-content {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+}
+
+.case-content .read-more-btn {
+    margin-top: auto !important;
+}
