@@ -890,7 +890,7 @@
             if (window.innerWidth <= 1024) return;
             
             const container = document.querySelector('.essence-grid-layout');
-            const startEl = document.querySelector('.essence-layer');
+            const startEl = document.querySelectorAll('.essence-layer')[1];
             const endEls = document.querySelectorAll('.essence-measure-item');
             
             if (!container || !startEl || endEls.length === 0) return;
