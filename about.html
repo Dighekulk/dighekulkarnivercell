@@ -88,7 +88,10 @@
             display: grid;
             grid-template-columns: 280px 1fr;
             transition: all 0.4s ease;
-            min-height: 250px;
+            height: 250px;
+        }
+        .person-profile-card.expanded {
+            height: auto;
         }
         .person-profile-card:hover {
             box-shadow: 0 25px 50px rgba(21, 50, 57, 0.08);
@@ -151,6 +154,7 @@
             .who-we-are-grid, .person-profile-card {
                 grid-template-columns: 1fr;
                 gap: 40px;
+                height: auto !important;
             }
             .person-img-box {
                 height: 380px;
@@ -300,7 +304,7 @@
 
             <div class="person-profile-card animate-on-scroll">
                 <div class="person-img-box">
-                    <img src="images/about_portrait.jpg" alt="Amruta Dighe-Kulkarni">
+                    <img src="images/Amruta Dighe-Kulkarni.jpeg" alt="Amruta Dighe-Kulkarni">
                 </div>
                 <div class="person-content-box">
                     <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 6px; font-weight: 700;">Amruta Dighe-Kulkarni</h3>

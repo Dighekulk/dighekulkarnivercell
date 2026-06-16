@@ -363,14 +363,18 @@ document.addEventListener("DOMContentLoaded", function () {
 // Read More Toggle for Collaborators
 function toggleReadMore(event) {
     event.preventDefault();
-    const link = event.target;
-    const content = link.previousElementSibling; // Expecting .more-content immediately before
+    const toggleBtn = event.currentTarget || event.target;
+    const link = toggleBtn.closest(".toggle-btn-link") || toggleBtn;
+    const content = link.previousElementSibling;
+    const card = link.closest(".person-profile-card");
 
-    if (content.style.display === "none") {
+    if (content.style.display === "none" || content.style.display === "") {
         content.style.display = "block";
-        link.textContent = "Read Less";
+        link.innerHTML = 'Read Less <i class="fa-solid fa-arrow-right" style="margin-left: 8px; transform: rotate(-90deg);"></i>';
+        if (card) card.classList.add("expanded");
     } else {
         content.style.display = "none";
-        link.textContent = "Read More";
+        link.innerHTML = 'Read More <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>';
+        if (card) card.classList.remove("expanded");
     }
 }
