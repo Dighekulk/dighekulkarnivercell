@@ -342,54 +342,75 @@
     </section>
 
     <!-- HOW WE WORK -->
-    <section style="padding: 45px 0; background: linear-gradient(135deg, #153239 0%, #204650 100%); color: #ffffff;" class="animate-on-scroll">
+    <section class="hww-timeline-section" style="padding: 45px 0; background: linear-gradient(135deg, #153239 0%, #204650 100%); color: #ffffff;">
         <div class="container" style="max-width: 1100px;">
             <div style="text-align: center; margin-bottom: 50px;" class="animate-on-scroll">
                 <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 10px;">HOW WE WORK</span>
-                <h2 class="section-title" style="color: #ffffff; margin-bottom: 15px; font-size: 2.8rem; font-weight: 800;">Our execution story: From diagnosis to lasting capability.</h2>
-                <p style="color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.1rem;">We don't just hand over reports. We partner with you at every stage to build real capability.</p>
             </div>
             
-            <div style="display: flex; flex-direction: column; gap: 40px; margin-top: 50px; position: relative;">
-                <!-- Line connecting steps (Desktop only) -->
-                <div style="position: absolute; left: 50px; top: 0; bottom: 0; width: 2px; background: rgba(191, 183, 129, 0.25); z-index: 1;" class="desktop-only-line"></div>
+            <div class="hww-timeline-container" style="display: flex; flex-direction: column; gap: 40px; margin-top: 50px; position: relative;">
+                <!-- Scrolling Progress Line -->
+                <div class="hww-scroll-line-container desktop-only-line" style="position: absolute; left: 50px; top: 0; bottom: 0; width: 2px; background: rgba(191, 183, 129, 0.15); z-index: 1;">
+                    <div class="hww-scroll-line-fill" style="width: 100%; height: 0%; background: var(--accent-gold); transition: height 0.1s ease;"></div>
+                </div>
                 
-                <!-- Phase 1 -->
-                <div class="hww-story-row">
-                    <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent-gold); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                <!-- Pointer 1 -->
+                <div class="hww-story-row animate-on-scroll" style="display: flex; gap: 40px; position: relative; z-index: 2;">
+                    <div class="hww-badge" style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent-gold); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
                         01
                     </div>
-                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 35px; border-radius: 16px; flex-grow: 1;">
-                        <h3 style="color: #ffffff; font-size: 1.6rem; margin-bottom: 12px; font-weight: 700;">Diagnose & Partner (Commercially Grounded)</h3>
-                        <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.7; margin: 0; max-width: 100%;">
-                            Every engagement starts by rooting ourselves in your business reality and financial goals. We work in close partnership with your leadership team to isolate what constraints execution and scale, ensuring all diagnostic insights are commercially grounded.
-                        </p>
+                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 16px; flex-grow: 1; display: flex; align-items: center;">
+                        <h3 style="color: #ffffff; font-size: 1.6rem; margin: 0; font-weight: 700;">Senior-led engagement model</h3>
                     </div>
                 </div>
                 
-                <!-- Phase 2 -->
-                <div class="hww-story-row">
-                    <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent-gold); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                <!-- Pointer 2 -->
+                <div class="hww-story-row animate-on-scroll" style="display: flex; gap: 40px; position: relative; z-index: 2;">
+                    <div class="hww-badge" style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent-gold); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
                         02
                     </div>
-                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 35px; border-radius: 16px; flex-grow: 1;">
-                        <h3 style="color: #ffffff; font-size: 1.6rem; margin-bottom: 12px; font-weight: 700;">Custom Design (Tailored & Practical)</h3>
-                        <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.7; margin: 0; max-width: 100%;">
-                            Instead of forcing generic templates, we engineer customized and modular solutions to address your exact stage of complexity. We translate complex organisation design frameworks into clear, workable operating models designed specifically for real-world execution.
-                        </p>
+                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 16px; flex-grow: 1; display: flex; align-items: center;">
+                        <h3 style="color: #ffffff; font-size: 1.6rem; margin: 0; font-weight: 700;">Practical and execution-focused approach</h3>
                     </div>
                 </div>
                 
-                <!-- Phase 3 -->
-                <div class="hww-story-row">
-                    <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent-gold); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                <!-- Pointer 3 -->
+                <div class="hww-story-row animate-on-scroll" style="display: flex; gap: 40px; position: relative; z-index: 2;">
+                    <div class="hww-badge" style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent-gold); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
                         03
                     </div>
-                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 35px; border-radius: 16px; flex-grow: 1;">
-                        <h3 style="color: #ffffff; font-size: 1.6rem; margin-bottom: 12px; font-weight: 700;">Activate & Sustain (Senior-Led Capability)</h3>
-                        <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.7; margin: 0; max-width: 100%;">
-                            Our engagements are led directly by senior practitioners. We work hand-in-hand with your teams to implement changes, activate governance, align leadership, and build long-term organisational muscle and capability, so progress is sustained independently long after we leave.
-                        </p>
+                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 16px; flex-grow: 1; display: flex; align-items: center;">
+                        <h3 style="color: #ffffff; font-size: 1.6rem; margin: 0; font-weight: 700;">Tailored and modular solutions</h3>
+                    </div>
+                </div>
+                
+                <!-- Pointer 4 -->
+                <div class="hww-story-row animate-on-scroll" style="display: flex; gap: 40px; position: relative; z-index: 2;">
+                    <div class="hww-badge" style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent-gold); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                        04
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 16px; flex-grow: 1; display: flex; align-items: center;">
+                        <h3 style="color: #ffffff; font-size: 1.6rem; margin: 0; font-weight: 700;">Close partnership with leadership teams</h3>
+                    </div>
+                </div>
+                
+                <!-- Pointer 5 -->
+                <div class="hww-story-row animate-on-scroll" style="display: flex; gap: 40px; position: relative; z-index: 2;">
+                    <div class="hww-badge" style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent-gold); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                        05
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 16px; flex-grow: 1; display: flex; align-items: center;">
+                        <h3 style="color: #ffffff; font-size: 1.6rem; margin: 0; font-weight: 700;">Focus on sustainable organisational capability</h3>
+                    </div>
+                </div>
+                
+                <!-- Pointer 6 -->
+                <div class="hww-story-row animate-on-scroll" style="display: flex; gap: 40px; position: relative; z-index: 2;">
+                    <div class="hww-badge" style="width: 100px; height: 100px; border-radius: 50%; background: var(--accent-gold); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; flex-shrink: 0; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+                        06
+                    </div>
+                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 16px; flex-grow: 1; display: flex; align-items: center;">
+                        <h3 style="color: #ffffff; font-size: 1.6rem; margin: 0; font-weight: 700;">Business-first and commercially grounded thinking</h3>
                     </div>
                 </div>
             </div>
@@ -463,6 +484,41 @@
 
     <!-- JS -->
     <script src="script.js"></script>
+    
+    <!-- Custom script for scrolling progress line -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const timeline = document.querySelector(".hww-timeline-container");
+            const fillLine = document.querySelector(".hww-scroll-line-fill");
+            
+            if (!timeline || !fillLine) return;
+            
+            function updateScrollLine() {
+                const rect = timeline.getBoundingClientRect();
+                const viewportHeight = window.innerHeight;
+                
+                // The line starts growing when the top of the timeline reaches 75% of viewport height
+                // and finishes growing when the bottom of the timeline reaches 25% of viewport height.
+                const startTrigger = viewportHeight * 0.75;
+                const endTrigger = viewportHeight * 0.25;
+                
+                const totalScrollableDistance = rect.height - (endTrigger - startTrigger);
+                const scrolledDistance = startTrigger - rect.top;
+                
+                let percentage = (scrolledDistance / totalScrollableDistance) * 100;
+                
+                // Clamp the value between 0 and 100
+                if (percentage < 0) percentage = 0;
+                if (percentage > 100) percentage = 100;
+                
+                fillLine.style.height = percentage + "%";
+            }
+            
+            window.addEventListener("scroll", updateScrollLine);
+            window.addEventListener("resize", updateScrollLine);
+            updateScrollLine(); // Run immediately to set initial position
+        });
+    </script>
 </body>
 
 </html>
