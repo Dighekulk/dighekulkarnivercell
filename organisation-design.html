@@ -363,43 +363,297 @@
             transform: scale(1.03);
         }
 
-        .service-card {
-            border-radius: 60px 20px 20px 20px;
-            padding: 45px 35px;
-            border: none;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        /* Interactive Services Console */
+        .services-interactive-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 40px;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .services-nav-list {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
+            gap: 16px;
+        }
+
+        .service-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 24px;
+            border-radius: 16px;
+            background: #F8FAFC;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
             position: relative;
+            text-align: left;
         }
 
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 45px rgba(21, 50, 57, 0.08);
+        .service-nav-item:hover {
+            background: #F1F5F9;
+            transform: translateX(5px);
         }
 
-        .service-card .icon-wrapper {
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            background: #ffffff;
+        .service-nav-item.active {
+            background: var(--primary-color);
+            color: #ffffff;
+            box-shadow: 0 10px 25px rgba(32, 70, 80, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        .service-nav-num {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            opacity: 0.8;
+            transition: color 0.3s;
+        }
+
+        .service-nav-item.active .service-nav-num {
+            color: #ffffff;
+            opacity: 1;
+        }
+
+        .service-nav-icon {
+            font-size: 1.5rem;
+            width: 44px;
+            height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 25px;
+            border-radius: 50%;
+            background: #ffffff;
             color: var(--primary-color);
-            font-size: 1.75rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-            transition: all 0.3s ease;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
         }
 
-        .service-card:hover .icon-wrapper {
-            background: var(--primary-color);
+        .service-nav-item.active .service-nav-icon {
+            background: var(--accent-gold);
+            color: var(--primary-color);
+        }
+
+        .service-nav-icon img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .service-nav-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            transition: color 0.3s;
+        }
+
+        .service-nav-item.active .service-nav-title {
             color: #ffffff;
-            transform: scale(1.08) rotate(5deg);
-            box-shadow: 0 8px 20px rgba(21, 50, 57, 0.15);
+        }
+
+        /* Detail Showcase Panel */
+        .service-showcase-panel {
+            background: linear-gradient(135deg, #F8FAFC 0%, #FAF5EB 100%);
+            border-radius: 20px;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .service-showcase-content {
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.4s ease;
+            display: none;
+            z-index: 2;
+        }
+
+        .service-showcase-content.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-showcase-tag {
+            display: inline-block;
+            background: rgba(191, 183, 129, 0.15);
+            color: var(--primary-color);
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 30px;
+            margin-bottom: 25px;
+        }
+
+        .service-showcase-title {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 2.2rem;
+            line-height: 1.25;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-showcase-desc {
+            font-size: 1.15rem;
+            line-height: 1.75;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            max-width: 100%;
+        }
+
+        .service-focus-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .service-focus-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-focus-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .service-focus-item i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+        }
+
+        /* Responsive Mobile styles: Accordion fallback */
+        @media (max-width: 900px) {
+            .services-interactive-wrapper {
+                grid-template-columns: 1fr;
+                padding: 20px;
+                background: transparent;
+                box-shadow: none;
+                border: none;
+                gap: 20px;
+            }
+
+            .services-nav-list {
+                display: none; /* Hide desktop list on mobile */
+            }
+
+            /* Accordion design for mobile */
+            .service-mobile-accordion {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+
+            .accordion-item {
+                background: #ffffff;
+                border-radius: 16px;
+                border: 1px solid rgba(0, 0, 0, 0.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .accordion-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+                cursor: pointer;
+                background: #ffffff;
+                user-select: none;
+            }
+
+            .accordion-header-left {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .accordion-num {
+                font-family: 'El Messiri', sans-serif;
+                font-size: 1.15rem;
+                font-weight: 700;
+                color: var(--accent-gold);
+            }
+
+            .accordion-title {
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: var(--primary-color);
+            }
+
+            .accordion-arrow {
+                font-size: 0.9rem;
+                color: var(--primary-color);
+                transition: transform 0.3s ease;
+            }
+
+            .accordion-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+                background: #FAF8F5;
+            }
+
+            .accordion-inner {
+                padding: 24px 20px;
+                border-top: 1px solid rgba(0, 0, 0, 0.03);
+            }
+
+            .accordion-item.active {
+                border-color: var(--accent-gold);
+                box-shadow: 0 8px 25px rgba(32, 70, 80, 0.06);
+            }
+
+            .accordion-item.active .accordion-arrow {
+                transform: rotate(180deg);
+            }
+
+            .accordion-focus-list {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin-top: 20px;
+            }
+        }
+        
+        @media (min-width: 901px) {
+            .service-mobile-accordion {
+                display: none; /* Hide mobile accordion on desktop */
+            }
         }
 
         .diagnostic-box {
@@ -830,42 +1084,162 @@
     </section>
 
     <!-- SERVICES -->
-    <section style="background-color: #F8FAFC; padding: 45px 0;" class="animate-on-scroll">
+    <section style="background-color: #F8FAFC; padding: 60px 0;" class="animate-on-scroll">
         <div class="container">
             <div style="text-align: center; margin-bottom: 40px;" class="animate-on-scroll">
                 <h2 class="section-title text-center" style="font-size: 0.95rem; margin-bottom: 15px; margin-top: 0; font-weight: 800; color: #BFB781; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 2px;">SERVICES</h2>
             </div>
 
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto;">
-                <!-- Card 1 -->
-                <div class="service-card animate-on-scroll" style="flex: 0 1 calc(33.333% - 30px); min-width: 320px; background-color: #D2ECF7;">
-                    <div class="icon-wrapper"><i class="fa-solid fa-sitemap"></i></div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--primary-color);">Org Strategy & Operating Model</h3>
-                    <p style="color: var(--text-dark); font-size: 1.05rem; line-height: 1.6; margin: 0;">Translating strategy into the organisational capabilities the business must build, and the operating model that delivers them at scale. Applied at strategy refreshes, new market entry, business model shifts, and the growth inflections where what worked before no longer fits what’s next.</p>
+            <!-- Desktop Interactive Split Showcase -->
+            <div class="services-interactive-wrapper animate-on-scroll">
+                <!-- Navigation side -->
+                <div class="services-nav-list">
+                    <!-- Tab 1 -->
+                    <div class="service-nav-item active" data-target="service-1">
+                        <span class="service-nav-num">01</span>
+                        <div class="service-nav-icon"><i class="fa-solid fa-sitemap"></i></div>
+                        <span class="service-nav-title">Org Strategy & Operating Model</span>
+                    </div>
+                    <!-- Tab 2 -->
+                    <div class="service-nav-item" data-target="service-2">
+                        <span class="service-nav-num">02</span>
+                        <div class="service-nav-icon"><i class="fa-solid fa-user-shield"></i></div>
+                        <span class="service-nav-title">Organisation Structure & Role Clarity</span>
+                    </div>
+                    <!-- Tab 3 -->
+                    <div class="service-nav-item" data-target="service-3">
+                        <span class="service-nav-num">03</span>
+                        <div class="service-nav-icon"><i class="fa-solid fa-gears"></i></div>
+                        <span class="service-nav-title">Execution Governance & Operating Effectiveness</span>
+                    </div>
+                    <!-- Tab 4 -->
+                    <div class="service-nav-item" data-target="service-4">
+                        <span class="service-nav-num">04</span>
+                        <div class="service-nav-icon"><img src="images/Talent & Capability Systems (1).png" alt="Talent & Capability Systems Icon"></div>
+                        <span class="service-nav-title">Talent & Capability Systems</span>
+                    </div>
+                    <!-- Tab 5 -->
+                    <div class="service-nav-item" data-target="service-5">
+                        <span class="service-nav-num">05</span>
+                        <div class="service-nav-icon"><img src="images/Organisation & Change Activation.png" alt="Organisation & Change Activation Icon"></div>
+                        <span class="service-nav-title">Organisation & Change Activation</span>
+                    </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="service-card animate-on-scroll" style="flex: 0 1 calc(33.333% - 30px); min-width: 320px; background-color: #FAF5EB;">
-                    <div class="icon-wrapper"><i class="fa-solid fa-user-shield"></i></div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--primary-color);">Organisation Structure & Role Clarity</h3>
-                    <p style="color: var(--text-dark); font-size: 1.05rem; line-height: 1.6; margin: 0;">Structures, leadership roles, and accountability mechanisms that support coordination, clarity, and effectiveness. Leadership team redesign, new business unit creation, role overlap resolution, and the structural shifts that come with scale, integration, or stage transition.</p>
+
+                <!-- Showcase side -->
+                <div class="service-showcase-panel">
+                    <!-- Showcase 1 -->
+                    <div id="service-1" class="service-showcase-content active">
+                        <h3 class="service-showcase-title">Org Strategy & Operating Model</h3>
+                        <p class="service-showcase-desc">Translating strategy into the organisational capabilities the business must build, and the operating model that delivers them at scale. Applied at strategy refreshes, new market entry, business model shifts, and the growth inflections where what worked before no longer fits what’s next.</p>
+                    </div>
+
+                    <!-- Showcase 2 -->
+                    <div id="service-2" class="service-showcase-content">
+                        <h3 class="service-showcase-title">Organisation Structure & Role Clarity</h3>
+                        <p class="service-showcase-desc">Structures, leadership roles, and accountability mechanisms that support coordination, clarity, and effectiveness. Leadership team redesign, new business unit creation, role overlap resolution, and the structural shifts that come with scale, integration, or stage transition.</p>
+                    </div>
+
+                    <!-- Showcase 3 -->
+                    <div id="service-3" class="service-showcase-content">
+                        <h3 class="service-showcase-title">Execution Governance & Operating Effectiveness</h3>
+                        <p class="service-showcase-desc">Governance forums, operating cadence, management processes, metrics, and decision effectiveness — geared to execution at scale. For slow decisions, unclear decision rights, cross-functional friction, and governance that has not kept pace with the business.</p>
+                    </div>
+
+                    <!-- Showcase 4 -->
+                    <div id="service-4" class="service-showcase-content">
+                        <h3 class="service-showcase-title">Talent & Capability Systems</h3>
+                        <p class="service-showcase-desc">The talent practices and capability-building systems that sustain performance as the organisation grows and grows more complex. Talent systems, performance architecture, and the HR functional capabilities that turn individual capability into institutional strength.</p>
+                    </div>
+
+                    <!-- Showcase 5 -->
+                    <div id="service-5" class="service-showcase-content">
+                        <h3 class="service-showcase-title">Organisation & Change Activation</h3>
+                        <p class="service-showcase-desc">Leadership alignment, stakeholder engagement, and organisational change adoption through growth, transformation, and change. Large-scale restructures, post-acquisition integration, and new operating-model rollouts: the activation work that determines whether design becomes reality.</p>
+                    </div>
                 </div>
-                <!-- Card 3 -->
-                <div class="service-card animate-on-scroll" style="flex: 0 1 calc(33.333% - 30px); min-width: 320px; background-color: #E6F0F2;">
-                    <div class="icon-wrapper"><i class="fa-solid fa-gears"></i></div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--primary-color);">Execution Governance & Operating Effectiveness</h3>
-                    <p style="color: var(--text-dark); font-size: 1.05rem; line-height: 1.6; margin: 0;">Governance forums, operating cadence, management processes, metrics, and decision effectiveness — geared to execution at scale. For slow decisions, unclear decision rights, cross-functional friction, and governance that has not kept pace with the business.</p>
+            </div>
+
+            <!-- Mobile Interactive Accordion (Falls back cleanly on mobile) -->
+            <div class="service-mobile-accordion animate-on-scroll">
+                <!-- Accordion 1 -->
+                <div class="accordion-item active">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-header-left">
+                            <span class="accordion-num">01</span>
+                            <span class="accordion-title">Org Strategy & Operating Model</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                    </div>
+                    <div class="accordion-content" style="max-height: 500px;">
+                        <div class="accordion-inner">
+                            <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin-bottom: 0;">Translating strategy into the organisational capabilities the business must build, and the operating model that delivers them at scale. Applied at strategy refreshes, new market entry, business model shifts, and the growth inflections where what worked before no longer fits what’s next.</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- Card 4 -->
-                <div class="service-card animate-on-scroll" style="flex: 0 1 calc(50% - 30px); min-width: 320px; max-width: 550px; background-color: #FAF5EB;">
-                    <div class="icon-wrapper"><img src="images/Talent & Capability Systems (1).png" alt="Talent & Capability Systems Icon" style="width: 34px; height: 34px; object-fit: contain;"></div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--primary-color);">Talent & Capability Systems</h3>
-                    <p style="color: var(--text-dark); font-size: 1.05rem; line-height: 1.6; margin: 0;">The talent practices and capability-building systems that sustain performance as the organisation grows and grows more complex. Talent systems, performance architecture, and the HR functional capabilities that turn individual capability into institutional strength.</p>
+
+                <!-- Accordion 2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-header-left">
+                            <span class="accordion-num">02</span>
+                            <span class="accordion-title">Organisation Structure & Role Clarity</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin-bottom: 0;">Structures, leadership roles, and accountability mechanisms that support coordination, clarity, and effectiveness. Leadership team redesign, new business unit creation, role overlap resolution, and the structural shifts that come with scale, integration, or stage transition.</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- Card 5 -->
-                <div class="service-card animate-on-scroll" style="flex: 0 1 calc(50% - 30px); min-width: 320px; max-width: 550px; background-color: #D2ECF7;">
-                    <div class="icon-wrapper"><img src="images/Organisation & Change Activation.png" alt="Organisation & Change Activation Icon" style="width: 34px; height: 34px; object-fit: contain;"></div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: var(--primary-color);">Organisation & Change Activation</h3>
-                    <p style="color: var(--text-dark); font-size: 1.05rem; line-height: 1.6; margin: 0;">Leadership alignment, stakeholder engagement, and organisational change adoption through growth, transformation, and change. Large-scale restructures, post-acquisition integration, and new operating-model rollouts: the activation work that determines whether design becomes reality.</p>
+
+                <!-- Accordion 3 -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-header-left">
+                            <span class="accordion-num">03</span>
+                            <span class="accordion-title">Execution Governance & Operating Effectiveness</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin-bottom: 0;">Governance forums, operating cadence, management processes, metrics, and decision effectiveness — geared to execution at scale. For slow decisions, unclear decision rights, cross-functional friction, and governance that has not kept pace with the business.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion 4 -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-header-left">
+                            <span class="accordion-num">04</span>
+                            <span class="accordion-title">Talent & Capability Systems</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin-bottom: 0;">The talent practices and capability-building systems that sustain performance as the organisation grows and grows more complex. Talent systems, performance architecture, and the HR functional capabilities that turn individual capability into institutional strength.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion 5 -->
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-header-left">
+                            <span class="accordion-num">05</span>
+                            <span class="accordion-title">Organisation & Change Activation</span>
+                        </div>
+                        <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p style="font-size: 1rem; line-height: 1.6; color: var(--text-dark); margin-bottom: 0;">Leadership alignment, stakeholder engagement, and organisational change adoption through growth, transformation, and change. Large-scale restructures, post-acquisition integration, and new operating-model rollouts: the activation work that determines whether design becomes reality.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1147,36 +1521,105 @@
     <script src="script.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Timeline Scroll Animation
             const timeline = document.querySelector(".story-timeline-new");
             const fillLine = document.querySelector(".scroll-line-fill");
             
-            if (!timeline || !fillLine) return;
-            
-            function updateScrollLine() {
-                const rect = timeline.getBoundingClientRect();
-                const viewportHeight = window.innerHeight;
+            if (timeline && fillLine) {
+                function updateScrollLine() {
+                    const rect = timeline.getBoundingClientRect();
+                    const viewportHeight = window.innerHeight;
+                    
+                    const startTrigger = viewportHeight * 0.75;
+                    const endTrigger = viewportHeight * 0.25;
+                    
+                    const totalScrollableDistance = rect.height - (endTrigger - startTrigger);
+                    const scrolledDistance = startTrigger - rect.top;
+                    
+                    let percentage = (scrolledDistance / totalScrollableDistance) * 100;
+                    
+                    if (percentage < 0) percentage = 0;
+                    if (percentage > 100) percentage = 100;
+                    
+                    fillLine.style.height = percentage + "%";
+                }
                 
-                // The line starts growing when the top of the timeline reaches 75% of viewport height
-                // and finishes growing when the bottom of the timeline reaches 25% of viewport height.
-                const startTrigger = viewportHeight * 0.75;
-                const endTrigger = viewportHeight * 0.25;
-                
-                const totalScrollableDistance = rect.height - (endTrigger - startTrigger);
-                const scrolledDistance = startTrigger - rect.top;
-                
-                let percentage = (scrolledDistance / totalScrollableDistance) * 100;
-                
-                // Clamp the value between 0 and 100
-                if (percentage < 0) percentage = 0;
-                if (percentage > 100) percentage = 100;
-                
-                fillLine.style.height = percentage + "%";
+                window.addEventListener("scroll", updateScrollLine);
+                window.addEventListener("resize", updateScrollLine);
+                updateScrollLine();
             }
-            
-            window.addEventListener("scroll", updateScrollLine);
-            window.addEventListener("resize", updateScrollLine);
-            updateScrollLine(); // Run immediately to set initial position
+
+            // Desktop Services Tab Navigation
+            const navItems = document.querySelectorAll(".service-nav-item");
+            const showcaseContents = document.querySelectorAll(".service-showcase-content");
+            const showcasePanel = document.querySelector(".service-showcase-panel");
+
+            // Modern subtle backgrounds matching each service tab
+            const bgGradients = [
+                "linear-gradient(135deg, #F8FAFC 0%, #D2ECF7 100%)", // Service 1
+                "linear-gradient(135deg, #F8FAFC 0%, #FAF5EB 100%)", // Service 2
+                "linear-gradient(135deg, #F8FAFC 0%, #E6F0F2 100%)", // Service 3
+                "linear-gradient(135deg, #F8FAFC 0%, #FAF5EB 100%)", // Service 4
+                "linear-gradient(135deg, #F8FAFC 0%, #D2ECF7 100%)"  // Service 5
+            ];
+
+            navItems.forEach((item, index) => {
+                const triggerTabSwitch = () => {
+                    if (item.classList.contains("active")) return;
+
+                    // Remove active from all nav items
+                    navItems.forEach(nav => nav.classList.remove("active"));
+                    // Add active to current
+                    item.classList.add("active");
+
+                    // Transition showcase content
+                    const targetId = item.getAttribute("data-target");
+                    
+                    showcaseContents.forEach(content => {
+                        content.classList.remove("active");
+                        if (content.id === targetId) {
+                            setTimeout(() => {
+                                content.classList.add("active");
+                            }, 50);
+                        }
+                    });
+
+                    // Update background color smoothly
+                    if (showcasePanel) {
+                        showcasePanel.style.background = bgGradients[index];
+                    }
+                };
+
+                // Support both hover and click for enhanced UX
+                item.addEventListener("mouseenter", triggerTabSwitch);
+                item.addEventListener("click", triggerTabSwitch);
+            });
         });
+
+        // Mobile Accordion Toggle Function
+        function toggleAccordion(header) {
+            const accordionItem = header.parentElement;
+            const accordionContent = accordionItem.querySelector(".accordion-content");
+            const isActive = accordionItem.classList.contains("active");
+
+            // Close all other accordion items
+            document.querySelectorAll(".accordion-item").forEach(item => {
+                item.classList.remove("active");
+                const content = item.querySelector(".accordion-content");
+                if (content) {
+                    content.style.maxHeight = null;
+                }
+            });
+
+            // Toggle active state of clicked item
+            if (!isActive) {
+                accordionItem.classList.add("active");
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+            } else {
+                accordionItem.classList.remove("active");
+                accordionContent.style.maxHeight = null;
+            }
+        }
     </script>
 </body>
 
