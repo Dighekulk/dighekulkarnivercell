@@ -28,8 +28,12 @@
     box-sizing: border-box;
 }
 
+
+
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -38,7 +42,7 @@ body {
     line-height: 1.7;
     letter-spacing: 0.1px;
     background-color: var(--bg-light);
-    overflow-x: clip;
+    overflow-x: hidden;
     width: 100%;
     position: relative;
     -webkit-font-smoothing: antialiased;
@@ -367,7 +371,7 @@ header {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav-links {
         display: none;
         position: absolute;
@@ -423,6 +427,10 @@ header {
     .hero .container {
         padding-left: 20px;
         padding-right: 20px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .hero-content {
@@ -648,7 +656,7 @@ header {
 
 .values .section-title {
     color: #ffffff;
-    margin-bottom: 50px;
+    margin-bottom: 24px;
 }
 
 .values-grid {
@@ -4491,7 +4499,7 @@ footer>.container>div:last-child {
 }
 
 /* Mobile Dropdown styles */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .dropdown-menu {
         position: static;
         transform: none !important;
@@ -4564,4 +4572,50 @@ footer>.container>div:last-child {
 
 .case-content .read-more-btn {
     margin-top: auto !important;
+}
+
+/* Global Mobile Responsiveness Overrides */
+@media (max-width: 900px) {
+    /* Balance footer layout on tablet/mobile */
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    /* Ensure hero buttons fit on mobile screens */
+    .hero-buttons {
+        flex-direction: column !important;
+        width: 100% !important;
+        align-items: stretch !important;
+    }
+    
+    .hero-buttons .btn {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    /* Ensure containers don't have unnecessary side spacing */
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Responsive typography adjustments for small phones */
+    h1 {
+        font-size: 2.2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    h3 {
+        font-size: 1.4rem !important;
+    }
+    
+    .section-title {
+        font-size: 1.8rem !important;
+    }
 }
