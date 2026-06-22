@@ -269,6 +269,55 @@
                 transform: none !important;
                 margin-bottom: 20px;
             }
+
+            .service-card-premium {
+                height: auto !important;
+                display: flex;
+                flex-direction: column;
+            }
+            .service-img-container {
+                height: 200px !important;
+                flex-shrink: 0;
+            }
+            .service-content-body {
+                height: auto !important;
+                padding: 20px 24px !important;
+            }
+            .service-card-premium .hover-overlay {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                width: 100% !important;
+                height: auto !important;
+                opacity: 1 !important;
+                transform: none !important;
+                background-color: #ffffff !important;
+                padding: 0 24px 24px 24px !important;
+                box-sizing: border-box !important;
+            }
+            .service-card-premium .hover-overlay p {
+                color: var(--text-dark) !important;
+                text-align: left !important;
+                font-weight: 500 !important;
+                font-size: 1.05rem !important;
+            }
+
+            /* Leader Essence section fixes for mobile */
+            .essence-container h2 {
+                font-size: 2.2rem !important;
+            }
+            .essence-grid-layout > div {
+                height: auto !important;
+            }
+            .essence-concept-card {
+                height: auto !important;
+                padding: 30px 20px !important;
+            }
+            .essence-grid-layout h3 {
+                padding-left: 0 !important;
+                text-align: center !important;
+                margin-top: 20px !important;
+            }
         }
 
         /* Essence Redesign Styles */
@@ -570,8 +619,9 @@
                     <li><a href="leadership-impact.html" class="active-link">LEADERSHIP IMPACT</a></li>
                     <li><a href="about.html">ABOUT US</a></li>
                     <li class="dropdown">
-                        <a href="insights.html" class="dropdown-toggle">INSIGHTS <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px; vertical-align: middle;"></i></a>
+                        <a href="#" class="dropdown-toggle">INSIGHTS <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px; vertical-align: middle;"></i></a>
                         <ul class="dropdown-menu">
+                            <li><a href="blogs.html">BLOGS</a></li>
                             <li><a href="faq.html">FAQ</a></li>
                         </ul>
                     </li>

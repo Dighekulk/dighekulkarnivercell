@@ -179,17 +179,7 @@
             }
         }
 
-        @media (max-width: 768px) {
-            .hww-story-row {
-                flex-direction: column;
-                gap: 20px !important;
-                align-items: center;
-                text-align: center;
-            }
-            .hww-story-row > div:first-child {
-                margin: 0 auto;
-            }
-        }
+        /* Keep timeline layout consistent on mobile */
 
         /* Dynamic Scroll to Reveal Animations for About Timeline - REMOVED scroll reveal, kept transition & hover */
         @media (min-width: 769px) {
@@ -209,6 +199,29 @@
             .hww-story-row .hww-badge:hover {
                 transform: scale(1.08) !important;
                 box-shadow: 0 12px 30px rgba(191, 183, 129, 0.4) !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .testimonials h2.section-title {
+                font-size: 2.2rem !important;
+                margin-bottom: 30px !important;
+            }
+            .testimonials div[style*="background: #ffffff"] {
+                padding: 45px 24px !important;
+                border-radius: 16px !important;
+            }
+            .testimonials p {
+                font-size: 1rem !important;
+                text-align: left !important;
+                line-height: 1.6 !important;
+            }
+            .testimonials div[style*="border-top"] {
+                text-align: left !important;
+            }
+            .testimonials .fa-quote-left {
+                font-size: 2.2rem !important;
+                top: 15px !important;
+                left: 20px !important;
             }
         }
     </style>
@@ -233,8 +246,9 @@
                     <li><a href="leadership-impact.html">LEADERSHIP IMPACT</a></li>
                     <li><a href="about.html" class="active-link">ABOUT US</a></li>
                     <li class="dropdown">
-                        <a href="insights.html" class="dropdown-toggle">INSIGHTS <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px; vertical-align: middle;"></i></a>
+                        <a href="#" class="dropdown-toggle">INSIGHTS <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px; vertical-align: middle;"></i></a>
                         <ul class="dropdown-menu">
+                            <li><a href="blogs.html">BLOGS</a></li>
                             <li><a href="faq.html">FAQ</a></li>
                         </ul>
                     </li>

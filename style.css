@@ -32,7 +32,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
 }
 
@@ -42,7 +42,7 @@ body {
     line-height: 1.7;
     letter-spacing: 0.1px;
     background-color: var(--bg-light);
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
     position: relative;
     -webkit-font-smoothing: antialiased;
@@ -242,6 +242,7 @@ header {
     background-color: #FFFFFF;
     padding: 4px 0;
     /* 16-20px top/bottom */
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -1030,8 +1031,8 @@ header {
 
 .work-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
 .work-card {
@@ -1641,22 +1642,25 @@ footer>.container>div:last-child {
     }
 
     .why-design .card {
-        min-width: 260px;
-        max-width: 260px;
+        min-width: 290px;
+        max-width: 320px;
         scroll-snap-align: center;
         flex-shrink: 0;
-        height: 280px;
-        /* Reduced fixed height */
+        height: auto;
         margin-bottom: 0;
         display: flex;
         flex-direction: column;
-        /* Removed space-between to stack content naturally */
+    }
+
+    .why-design .card-img {
+        height: 200px !important;
+        flex-shrink: 0;
+        margin: 0 !important;
     }
 
     .why-design .card h3 {
-        font-size: 1.15rem;
-        /* Reduced from 1.25rem */
-        text-align: center;
+        font-size: 1.3rem;
+        text-align: left;
         margin-bottom: 15px;
     }
 
@@ -2879,12 +2883,7 @@ footer>.container>div:last-child {
     transform: translateX(50%);
 }
 
-@media (max-width: 900px) {
-    .scroller-controls {
-        display: none;
-        /* Hide buttons on mobile, allow touch scroll */
-    }
-}
+/* Controls inherit desktop flex layout on mobile */
 
 /* Responsive Services */
 @media (max-width: 900px) {
@@ -3750,7 +3749,7 @@ footer>.container>div:last-child {
     }
 
     .why-design .card {
-        padding: 24px !important;
+        padding: 0 !important;
     }
 }
 

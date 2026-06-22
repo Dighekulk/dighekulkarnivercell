@@ -557,12 +557,7 @@
         /* Responsive Mobile styles: Accordion fallback */
         @media (max-width: 900px) {
             .services-interactive-wrapper {
-                grid-template-columns: 1fr;
-                padding: 20px;
-                background: transparent;
-                box-shadow: none;
-                border: none;
-                gap: 20px;
+                display: none;
             }
 
             .services-nav-list {
@@ -834,7 +829,7 @@
                 padding: 50px 30px;
             }
             .diagnostic-box h2, .diagnostic-box p, .diagnostic-box div {
-                text-align: center !important;
+                text-align: left !important;
             }
             .or-divider {
                 position: static;
@@ -1016,11 +1011,28 @@
                 max-width: 600px;
             }
             .cap-or-badge {
-                position: relative;
-                top: auto;
-                left: auto;
-                transform: none;
-                margin: -22px auto 10px;
+                position: absolute;
+                top: -22px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+                margin: 0;
+            }
+        }
+        @media (max-width: 768px) {
+            .capability-section {
+                padding: 50px 0 !important;
+            }
+            .capability-section h2.section-title {
+                font-size: 2.2rem !important;
+            }
+            .cap-tagline {
+                font-size: 1rem !important;
+                text-align: left !important;
+                display: block !important;
+                width: max-content !important;
+                max-width: 100% !important;
+                margin: 15px auto 0 !important;
             }
         }
     </style>
@@ -1045,8 +1057,9 @@
                     <li><a href="leadership-impact.html">LEADERSHIP IMPACT</a></li>
                     <li><a href="about.html">ABOUT US</a></li>
                     <li class="dropdown">
-                        <a href="insights.html" class="dropdown-toggle">INSIGHTS <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px; vertical-align: middle;"></i></a>
+                        <a href="#" class="dropdown-toggle">INSIGHTS <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px; vertical-align: middle;"></i></a>
                         <ul class="dropdown-menu">
+                            <li><a href="blogs.html">BLOGS</a></li>
                             <li><a href="faq.html">FAQ</a></li>
                         </ul>
                     </li>
@@ -1450,8 +1463,8 @@
                         <h4>Redesigning the HR Operating Model for a Regional Bank</h4>
                         <p>A leading regional bank redesigning its HR operating model to align with a refreshed enterprise strategy and shifting workforce.</p>
                         <a href="case-study-hr-regional-bank.html" class="read-more-btn">Read more <i class="fa-solid fa-chevron-right"></i></a>
-                    </div>
                 </div>
+            </div>
 
             <div class="scroller-controls text-center" style="margin-top: 25px;">
                 <button class="scroll-btn left"><i class="fa-solid fa-chevron-left"></i></button>

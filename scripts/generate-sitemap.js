@@ -10,7 +10,7 @@ const staticPages = [
     'about.html',
     'organisation-design.html',
     'leadership-impact.html',
-    'insights.html',
+    'blogs.html',
     'faq.html',
     'contact.html'
 ];

@@ -9,6 +9,7 @@ menu_items_def = [
     ("leadership-impact.html", "LEADERSHIP IMPACT"),
     ("about.html", "ABOUT US"),
     ("insights.html", "INSIGHTS"),
+    ("blogs.html", "Blogs"),
     ("faq.html", "FAQ"),
     ("contact.html", "CONTACT US")
 ]
@@ -53,17 +54,18 @@ def update_html_file(file_path):
 
     # Build new menu content
     new_menu_lines = []
-    insights_active = active_href in ["insights.html", "faq.html"]
+    insights_active = active_href in ["insights.html", "faq.html", "blogs.html"]
     
     for href, label in menu_items_def:
-        if href == "faq.html":
-            # Skip FAQ as a top-level link because it's inside the dropdown now
+        if href in ["faq.html", "blogs.html"]:
+            # Skip FAQ and Blogs as a top-level link because they are inside the dropdown now
             continue
             
         if href == "insights.html":
-            active_class = ' class="active-link"' if insights_active else ''
+            active_class = 'class="dropdown-toggle active-link"' if insights_active else 'class="dropdown-toggle"'
+            blogs_active_class = ' class="active-link"' if active_href == "blogs.html" else ''
             faq_active_class = ' class="active-link"' if active_href == "faq.html" else ''
-            new_menu_lines.append(f'                    <li class="dropdown">\n                        <a href="insights.html"{active_class} class="dropdown-toggle">INSIGHTS <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px; vertical-align: middle;"></i></a>\n                        <ul class="dropdown-menu">\n                            <li><a href="faq.html"{faq_active_class}>FAQ</a></li>\n                        </ul>\n                    </li>')
+            new_menu_lines.append(f'                    <li class="dropdown">\n                        <a href="#" {active_class}>INSIGHTS <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 4px; vertical-align: middle;"></i></a>\n                        <ul class="dropdown-menu">\n                            <li><a href="blogs.html"{blogs_active_class}>BLOGS</a></li>\n                            <li><a href="faq.html"{faq_active_class}>FAQ</a></li>\n                        </ul>\n                    </li>')
         else:
             if href == active_href:
                 new_menu_lines.append(f'                    <li><a href="{href}" class="active-link">{label}</a></li>')
