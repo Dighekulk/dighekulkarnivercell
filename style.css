@@ -454,7 +454,7 @@ header {
     display: flex;
     align-items: center;
     color: var(--bg-white);
-    overflow: hidden;
+    overflow: visible;
 }
 
 @media (max-height: 750px) {
