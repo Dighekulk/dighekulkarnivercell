@@ -840,150 +840,343 @@
 
         /* Capability Build Premium Section */
         .capability-section {
-            background: linear-gradient(135deg, #153239 0%, #0d2126 100%);
-            color: #ffffff;
+            background-color: #faf9f5;
+            color: var(--primary-color);
             position: relative;
             overflow: hidden;
-            padding: 90px 0;
+            padding: 50px 0;
         }
 
-        .capability-section::before {
-            content: '';
-            position: absolute;
-            top: -20%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(191, 183, 129, 0.08) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .capability-section::after {
-            content: '';
-            position: absolute;
-            bottom: -20%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(191, 183, 129, 0.08) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .cap-tagline {
-            display: inline-block;
-            background: rgba(191, 183, 129, 0.1);
-            border-left: 3px solid var(--accent-gold);
-            padding: 12px 24px;
-            border-radius: 4px 12px 12px 4px;
-            margin-top: 15px;
-            font-weight: 600;
-            color: var(--accent-gold);
-            font-size: 1.15rem;
-            letter-spacing: 0.02em;
-        }
-
-        .cap-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 30px;
-            max-width: 1150px;
-            margin: 50px auto;
-            position: relative;
-        }
-
-        .cap-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            padding: 40px 30px;
+        .cap-section-header {
             text-align: center;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            position: relative;
-            backdrop-filter: blur(10px);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            max-width: 900px;
+            margin: 0 auto 30px;
         }
 
-        .cap-card:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(191, 183, 129, 0.35);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        }
-
-        .cap-header {
-            font-family: 'El Messiri', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 700;
+        .cap-section-header .cap-pretitle {
             color: var(--accent-gold);
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
-
-        .cap-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
             font-weight: 700;
-            color: #ffffff;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 20px;
-            opacity: 0.8;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 10px;
         }
 
-        .cap-card p {
-            font-size: 1.05rem;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.8);
-            margin: 0;
+        .cap-section-header .cap-divider {
+            width: 35px;
+            height: 2px;
+            background-color: var(--accent-gold);
+            margin: 0 auto 15px;
         }
 
-        /* Connecting OR badge */
-        .cap-or-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .cap-section-header h2 {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 3rem;
             font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 15px;
             color: var(--primary-color);
-            background: var(--accent-gold);
+        }
+
+        .cap-section-header h2 span.gold-text {
+            color: var(--accent-gold);
+        }
+
+        .cap-section-header .cap-subtitle {
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Container & Cards layout */
+        .cap-content-wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* Top Card - 2 Days Immersive */
+        .cap-hero-card {
+            background: #ffffff;
+            border: 1px solid #e7e4db;
+            border-radius: 24px;
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            margin-bottom: 25px;
+        }
+
+        .cap-hero-card-left {
+            padding: 35px 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .cap-badge-icon {
+            background-color: var(--primary-color);
+            color: var(--accent-gold);
             width: 44px;
             height: 44px;
             border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: -37px;
-            transform: translateY(-50%);
-            z-index: 10;
-            box-shadow: 0 4px 15px rgba(191, 183, 129, 0.4);
-            font-size: 0.9rem;
-        }
-
-        .cap-banner {
-            background: rgba(191, 183, 129, 0.08);
-            border: 1px solid rgba(191, 183, 129, 0.2);
-            padding: 24px 35px;
-            border-radius: 16px;
-            margin: 40px auto;
-            max-width: 800px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .cap-banner p {
-            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.15rem;
-            line-height: 1.6;
-            color: #ffffff;
+            margin-bottom: 15px;
+            border: 1px solid rgba(191, 183, 129, 0.3);
         }
 
-        .cap-banner strong {
+        .cap-card-large-title {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.1;
+            margin-bottom: 5px;
+        }
+
+        .cap-card-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
             color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: block;
         }
 
-        .cap-btn {
-            background: var(--accent-gold);
-            color: var(--primary-color) !important;
+        .cap-card-line {
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .cap-hero-card-left p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        .cap-hero-card-right {
+            position: relative;
+            min-height: 240px;
+        }
+
+        .cap-hero-card-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Divider line with OR badge */
+        .cap-or-divider-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cap-or-line {
+            flex-grow: 1;
+            border-top: 1px dashed #d3cfc0;
+        }
+
+        .cap-or-circle {
+            background-color: #faf9f5;
+            color: var(--primary-color);
+            font-family: 'El Messiri', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #d3cfc0;
+            z-index: 12;
+            position: relative;
+            margin: 0 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+        }
+
+        /* Dotted semi-circle arc above the OR circle */
+        .cap-or-circle::before {
+            content: '';
+            position: absolute;
+            width: 90px;
+            height: 45px;
+            border: 2px dashed #d3cfc0;
+            border-bottom: none;
+            border-radius: 90px 90px 0 0;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 13;
+        }
+
+        /* Wrapper that holds OR row + two cards with vertical center line */
+        .cap-or-section-wrapper {
+            position: relative;
+        }
+
+        .cap-or-section-wrapper::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: #d3cfc0;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        /* Bottom Two Cards Grid */
+        .cap-two-cards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .cap-bottom-card {
+            background: #ffffff;
+            border: 1px solid #e7e4db;
+            border-radius: 24px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        .cap-bottom-card-top {
+            padding: 30px 30px 20px;
+            flex-grow: 1;
+        }
+
+        .cap-bottom-card-top p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        .cap-bottom-card-image {
+            position: relative;
+            height: 210px;
+            overflow: hidden;
+        }
+
+        .cap-bottom-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+
+        .cap-bottom-card-footer {
+            background-color: var(--primary-color);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cap-footer-icon {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .cap-footer-text {
+            color: #ffffff;
+            font-size: 1rem;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        /* What you get Banner */
+        .cap-what-you-get-banner {
+            background-color: #f2efe4;
+            border: 1px solid #e1dcce;
+            border-radius: 20px;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            position: relative;
+            gap: 30px;
+        }
+
+        .cap-banner-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-shrink: 0;
+        }
+
+        .cap-banner-icon-circle {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            border: 1px solid #dcd7c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #faf8f5;
+        }
+
+        .cap-banner-icon-circle i {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+
+        .cap-banner-left h4 {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 1.45rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .cap-banner-center {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-dark);
+            flex-grow: 1;
+        }
+
+        .cap-banner-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-shrink: 0;
+        }
+
+        /* Button style */
+        .cap-new-btn {
+            background-color: var(--primary-color);
+            color: #ffffff !important;
             font-size: 1.15rem;
             padding: 18px 45px;
             border-radius: 50px;
@@ -992,31 +1185,38 @@
             align-items: center;
             gap: 12px;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(191, 183, 129, 0.25);
             text-decoration: none;
             border: none;
+            box-shadow: 0 6px 20px rgba(32, 70, 80, 0.15);
         }
 
-        .cap-btn:hover {
-            background: #ffffff;
-            color: var(--primary-color) !important;
+        .cap-new-btn:hover {
+            background-color: #1a3942;
+            color: #ffffff !important;
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 25px rgba(32, 70, 80, 0.25);
         }
 
-        @media (max-width: 1024px) {
-            .cap-grid {
+        @media (max-width: 991px) {
+            .cap-hero-card {
                 grid-template-columns: 1fr;
-                gap: 40px;
-                max-width: 600px;
             }
-            .cap-or-badge {
-                position: absolute;
-                top: -22px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 10;
-                margin: 0;
+            .cap-hero-card-right {
+                height: 300px;
+                min-height: auto;
+            }
+            .cap-two-cards-grid {
+                grid-template-columns: 1fr;
+            }
+            .cap-what-you-get-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 30px;
+            }
+            .cap-banner-right {
+                width: 100%;
+                justify-content: center;
+                margin-top: 10px;
             }
         }
         @media (max-width: 768px) {
@@ -1101,7 +1301,7 @@
     <section style="background-color: #F8FAFC; padding: 20px 0 60px 0;" class="animate-on-scroll">
         <div class="container">
             <div style="text-align: center; margin-bottom: 25px;" class="animate-on-scroll">
-                <h2 class="section-title text-center" style="font-size: 0.95rem; margin-bottom: 15px; margin-top: 30px; font-weight: 800; color: #BFB781; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 2px;">SERVICES</h2>
+                <h2 class="section-title text-center" style="font-size: 0.95rem; margin-bottom: 15px; margin-top: 30px; font-weight: 800; color: #BFB781; font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 2px;">WHAT WE DELIVER</h2>
             </div>
 
             <!-- Desktop Interactive Split Showcase -->
@@ -1372,43 +1572,112 @@
     <!-- DKOA CUSTOM CAPABILITY BUILD WITH PREMIUM DETAILS -->
     <section class="capability-section animate-on-scroll">
         <div class="container">
-            <div class="text-center" style="max-width: 900px; margin: 0 auto 50px;">
-                <span style="color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.95rem; display: block; margin-bottom: 15px;">THE CAPABILITY BUILD</span>
-                <h2 class="section-title text-center" style="font-size: 3.2rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; color: #ffffff;">The Org Design Capability Build</h2>
-                <p style="color: rgba(255,255,255,0.8); font-size: 1.3rem; line-height: 1.6; max-width: 700px; margin: 0 auto 25px; text-align: center;">A 2-day immersive that meets your work where it is.</p>
-                <div class="cap-tagline">Lead the design. Don’t just learn it.</div>
+            <div class="cap-section-header">
+                <span class="cap-pretitle">THE CAPABILITY BUILD</span>
+                <div class="cap-divider"></div>
+                <h2>Lead the design.<br><span class="gold-text">Don’t just learn it.</span></h2>
+                <p class="cap-subtitle">A 2-day immersive that meets your work where it is.</p>
             </div>
 
-            <div class="cap-grid">
-                <!-- Card 1 -->
-                <div class="cap-card">
-                    <div class="cap-header">2 DAYS</div>
-                    <div class="cap-title">IMMERSIVE</div>
-                    <p>Hands-on programme for senior teams. Short on slides, long on doing.</p>
+            <div class="cap-content-wrapper">
+                <!-- Top Card - 2 DAYS IMMERSIVE -->
+                <div class="cap-hero-card">
+                    <div class="cap-hero-card-left">
+                        <div class="cap-badge-icon">
+                            <i class="fa-regular fa-calendar-days"></i>
+                        </div>
+                        <h3 class="cap-card-large-title">2 DAYS</h3>
+                        <span class="cap-card-subtitle">IMMERSIVE</span>
+                        <div class="cap-card-line"></div>
+                        <p>Hands-on programme for senior teams.<br>Short on slides, long on doing.</p>
+                    </div>
+                    <div class="cap-hero-card-right">
+                        <img src="images/diverse-business-team-collaborating-project-strategy-meeting.jpg (1).jpeg" alt="2 Days Immersive Collaboration">
+                    </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="cap-card">
-                    <div class="cap-header">1 LIVE PROJECT</div>
-                    <div class="cap-title">ANCHORED</div>
-                    <p>Shaped around a redesign already underway, so frameworks meet your real trade-offs in real time.</p>
+                <!-- OR Separator + Cards wrapped for vertical line -->
+                <div class="cap-or-section-wrapper">
+                <div class="cap-or-divider-row">
+                    <div class="cap-or-line"></div>
+                    <div class="cap-or-circle">OR</div>
+                    <div class="cap-or-line"></div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="cap-card">
-                    <div class="cap-or-badge">OR</div>
-                    <div class="cap-header">1 BESPOKE CASE</div>
-                    <div class="cap-title">TAILORED</div>
-                    <p>Industry-specific simulation drawn from patterns in your sector and stage, when there is no live project to anchor to.</p>
+                <!-- Bottom Grid -->
+                <div class="cap-two-cards-grid">
+                    <!-- Card 2: 1 Live Project -->
+                    <div class="cap-bottom-card">
+                        <div class="cap-bottom-card-image">
+                            <img src="images/1 LIVE PROJECT.jpeg" alt="1 Live Project discussion">
+                        </div>
+                        <div class="cap-bottom-card-top">
+                            <div class="cap-badge-icon">
+                                <i class="fa-solid fa-anchor"></i>
+                            </div>
+                            <h3 class="cap-card-large-title" style="font-size: 1.8rem; margin-bottom: 2px;">1 LIVE PROJECT</h3>
+                            <span class="cap-card-subtitle" style="margin-bottom: 8px;">ANCHORED</span>
+                            <div class="cap-card-line" style="margin-bottom: 12px;"></div>
+                            <p>Shaped around a redesign already underway, so frameworks meet your real trade-offs in real time.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: 1 Bespoke Case -->
+                    <div class="cap-bottom-card">
+                        <div class="cap-bottom-card-image">
+                            <img src="images/1 BESPOKE CASE.jpeg" alt="1 Bespoke Case study">
+                        </div>
+                        <div class="cap-bottom-card-top">
+                            <div class="cap-badge-icon">
+                                <i class="fa-solid fa-puzzle-piece"></i>
+                            </div>
+                            <h3 class="cap-card-large-title" style="font-size: 1.8rem; margin-bottom: 2px;">1 BESPOKE CASE</h3>
+                            <span class="cap-card-subtitle" style="margin-bottom: 8px;">TAILORED</span>
+                            <div class="cap-card-line" style="margin-bottom: 12px;"></div>
+                            <p>Industry-specific simulation drawn from patterns in your sector and stage, when there is no live project to anchor to.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                </div><!-- end cap-or-section-wrapper -->
 
-            <div class="cap-banner">
-                <p><strong>What you get:</strong> Continued facilitator support after the two days, so what’s learnt becomes working practice, not workshop memory.</p>
-            </div>
+                <!-- What You Get Banner -->
+                <div class="cap-what-you-get-banner">
+                    <div class="cap-banner-left">
+                        <div class="cap-banner-icon-circle">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <h4>What you get:</h4>
+                    </div>
+                    <div class="cap-banner-center">
+                        Continued facilitator support after the two days, so what’s learnt becomes working practice, not workshop memory.
+                    </div>
+                    <div class="cap-banner-right">
+                        <svg width="150" height="90" viewBox="0 0 150 90" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity: 0.85;">
+                            <!-- Hill path -->
+                            <path d="M10 80 Q 45 80 75 55 T 135 30" stroke="#BFB781" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Flag pole -->
+                            <line x1="135" y1="30" x2="135" y2="10" stroke="#BFB781" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Flag -->
+                            <path d="M135 10 L 115 17 L 135 24 Z" fill="none" stroke="#BFB781" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <!-- Helper (at top) -->
+                            <circle cx="112" cy="18" r="4.5" stroke="#BFB781" stroke-width="2"/>
+                            <path d="M112 22.5 L 115 32 L 108 42" stroke="#BFB781" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M115 32 L 95 38" stroke="#BFB781" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M112 22.5 L 126 27" stroke="#BFB781" stroke-width="2" stroke-linecap="round"/>
 
-            <div class="text-center">
-                <a href="contact.html" class="cap-btn">Talk to us about a Capability Build <i class="fa-solid fa-arrow-right"></i></a>
+                            <!-- Climber -->
+                            <circle cx="84" cy="40" r="4.5" stroke="#BFB781" stroke-width="2"/>
+                            <path d="M84 44.5 L 82 54 L 75 64" stroke="#BFB781" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M82 54 L 95 38" stroke="#BFB781" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="text-center" style="margin-top: 20px;">
+                    <a href="contact.html" class="cap-new-btn">Talk to us about a Capability Build <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </section>
