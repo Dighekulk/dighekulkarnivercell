@@ -1210,6 +1210,12 @@
             .cap-two-cards-grid {
                 grid-template-columns: 1fr;
             }
+            .cap-or-section-wrapper::after {
+                display: none; /* Hide vertical center line on mobile/stacked view */
+            }
+            .cap-or-divider-row {
+                display: none; /* Hide OR divider row on mobile view */
+            }
             .cap-what-you-get-banner {
                 flex-direction: column;
                 align-items: flex-start;
@@ -1693,25 +1699,7 @@
                         Continued facilitator support after the two days, so what’s learnt becomes working practice, not workshop memory.
                     </div>
                     <div class="cap-banner-right">
-                        <svg width="150" height="90" viewBox="0 0 150 90" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity: 0.85;">
-                            <!-- Hill path -->
-                            <path d="M10 80 Q 45 80 75 55 T 135 30" stroke="#BFB781" stroke-width="2" stroke-linecap="round"/>
-                            <!-- Flag pole -->
-                            <line x1="135" y1="30" x2="135" y2="10" stroke="#BFB781" stroke-width="2" stroke-linecap="round"/>
-                            <!-- Flag -->
-                            <path d="M135 10 L 115 17 L 135 24 Z" fill="none" stroke="#BFB781" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            
-                            <!-- Helper (at top) -->
-                            <circle cx="112" cy="18" r="4.5" stroke="#BFB781" stroke-width="2"/>
-                            <path d="M112 22.5 L 115 32 L 108 42" stroke="#BFB781" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M115 32 L 95 38" stroke="#BFB781" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M112 22.5 L 126 27" stroke="#BFB781" stroke-width="2" stroke-linecap="round"/>
-
-                            <!-- Climber -->
-                            <circle cx="84" cy="40" r="4.5" stroke="#BFB781" stroke-width="2"/>
-                            <path d="M84 44.5 L 82 54 L 75 64" stroke="#BFB781" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M82 54 L 95 38" stroke="#BFB781" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
+                        <img src="images/What you get.png" alt="What you get logo" style="width: auto; max-height: 80px; object-fit: contain;">
                     </div>
                 </div>
 
