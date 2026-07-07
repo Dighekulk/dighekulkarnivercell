@@ -623,6 +623,9 @@
         .why-slider-arrow {
             display: none;
         }
+        .why-slider-arrow.hidden {
+            display: none !important;
+        }
     </style>
 
     <!-- SECTION 7: WHY Dighe Kulkarni -->
@@ -638,7 +641,7 @@
             </div>
 
             <div class="why-slider-container">
-                <button class="why-slider-arrow prev" onclick="prevWhySlide()" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="why-slider-arrow prev" id="whyPrevBtn" onclick="prevWhySlide()" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
                 <div class="why-slider-track-wrapper">
                     <div class="cards-grid-4 why-cards-row why-slider-track" id="whySliderTrack"
                         style="gap: 30px; margin-top: 0; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
@@ -697,7 +700,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="why-slider-arrow next" onclick="nextWhySlide()" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+                <button class="why-slider-arrow next" id="whyNextBtn" onclick="nextWhySlide()" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
     </section>
@@ -816,11 +819,31 @@
             if (!track) return;
             const cards = track.querySelectorAll('.card');
             if (!cards.length) return;
-            if (index >= cards.length) currentWhySlide = 0;
-            else if (index < 0) currentWhySlide = cards.length - 1;
-            else currentWhySlide = index;
+            
+            // Constrain index to bounds (disable circular looping)
+            if (index >= cards.length) index = cards.length - 1;
+            if (index < 0) index = 0;
+            currentWhySlide = index;
             
             track.style.transform = `translateX(calc(-${currentWhySlide} * (100% + 20px)))`;
+            
+            // Toggle visibility classes on arrows
+            const prevBtn = document.getElementById('whyPrevBtn');
+            const nextBtn = document.getElementById('whyNextBtn');
+            if (prevBtn) {
+                if (currentWhySlide === 0) {
+                    prevBtn.classList.add('hidden');
+                } else {
+                    prevBtn.classList.remove('hidden');
+                }
+            }
+            if (nextBtn) {
+                if (currentWhySlide === cards.length - 1) {
+                    nextBtn.classList.add('hidden');
+                } else {
+                    nextBtn.classList.remove('hidden');
+                }
+            }
         }
         function nextWhySlide() {
             showWhySlide(currentWhySlide + 1);
@@ -828,6 +851,11 @@
         function prevWhySlide() {
             showWhySlide(currentWhySlide - 1);
         }
+        
+        // Initialize on load to hide left arrow initially
+        document.addEventListener('DOMContentLoaded', () => {
+            showWhySlide(0);
+        });
         
         // Reset transform on resizing if transitioning out of mobile
         window.addEventListener('resize', () => {
