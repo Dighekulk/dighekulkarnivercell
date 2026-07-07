@@ -4582,15 +4582,29 @@ footer>.container>div:last-child {
     }
     
     /* Ensure hero buttons fit on mobile screens */
+    .hero {
+        background-position: left center !important;
+    }
+    
     .hero-buttons {
         flex-direction: column !important;
         width: 100% !important;
         align-items: stretch !important;
     }
     
+    .hero-buttons .dropdown {
+        width: 100% !important;
+    }
+    
     .hero-buttons .btn {
         width: 100% !important;
-        text-align: center !important;
+        text-align: left !important;
+        display: inline-flex !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        gap: 10px !important;
     }
     
     /* Ensure containers don't have unnecessary side spacing */

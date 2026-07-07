@@ -117,6 +117,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const rightBtn = document.querySelector(".scroll-btn.right");
 
     if (scroller && leftBtn && rightBtn) {
+        const updateArrowVisibility = () => {
+            if (scroller.scrollLeft <= 5) {
+                leftBtn.style.opacity = "0";
+                leftBtn.style.pointerEvents = "none";
+            } else {
+                leftBtn.style.opacity = "1";
+                leftBtn.style.pointerEvents = "auto";
+            }
+        };
+
+        // Check initially
+        updateArrowVisibility();
+
+        // Listen for scroll events
+        scroller.addEventListener("scroll", updateArrowVisibility);
+
         rightBtn.addEventListener("click", () => {
             scroller.scrollBy({ left: 380, behavior: "smooth" }); // 350 card + 30 gap
         });
