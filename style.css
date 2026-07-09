@@ -410,7 +410,7 @@ header {
         padding: 100px 0 380px;
         /* Reduced top padding for header clearance */
         background: linear-gradient(180deg, rgba(21, 50, 57, 0.7) 0%, rgba(21, 50, 57, 0.55) 50%, rgba(21, 50, 57, 0.25) 100%),
-            url('images/DK Website Banner v_2.png');
+            url('images/7371c3bf-2771-41a4-9775-14088c65fb45.png');
         background-size: cover;
         background-position: center 30%;
         align-items: flex-start;
@@ -446,7 +446,7 @@ header {
     padding: 60px 0;
     /* Gradient from solid Dark Teal (left) to transparent (right) */
     background-image: linear-gradient(90deg, rgba(21, 50, 57, 0.93) 0%, rgba(21, 50, 57, 0.82) 35%, rgba(21, 50, 57, 0.35) 60%, rgba(21, 50, 57, 0) 85%),
-        url('images/DK Website Banner v_2.png');
+        url('images/7371c3bf-2771-41a4-9775-14088c65fb45.png');
     background-color: #153239;
     background-size: cover;
     background-position: right center;
